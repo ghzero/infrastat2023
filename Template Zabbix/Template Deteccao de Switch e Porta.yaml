@@ -1,0 +1,15 @@
+zabbix_export:
+  version: '6.0'
+  date: '2023-07-03T12:27:35Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: a6bced0ec2474ccfa5244b6df1300ae0
+      template: 'TCC - Deteccao de Switch'
+      name: 'TCC - Deteccao de Switch'
+      groups:
+        -
+          name: Templates

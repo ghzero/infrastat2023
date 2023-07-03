@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFRAstat - Controle dos ativos de TI do LabTrans</title>
+    
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="stylesheet" href="assets/css/main/app-dark.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+<link rel="stylesheet" href="assets/css/shared/iconly.css">
+<link rel="stylesheet" href="assets/css/pages/datatables.css">
+<link rel="stylesheet" href="assets/css/pages/email.css">
+<link rel="stylesheet" href="assets/css/pages/fontawesome.css">
+<style>
+    .fontawesome-icons {
+        text-align: center;
+    }
+
+    article dl {
+        background-color: rgba(0, 0, 0, .02);
+        padding: 20px;
+    }
+
+    .fontawesome-icons .the-icon {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+</style>
+
+</head>
+
+<body>
+  
+        <div id="">
+        
+            
+<div class="page-heading">
+    
+       
+</div>
+<div class="page-content">
+   
+               
+    <section class="row">
+        <div class="col-12">
+
+            <div class="col-12">
+                
+
+               
+                              
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="card">
+                            
+                        
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-center">
+                                        <img class="w-50 text-center" src="assets/images/faces/logito.png" id="logo12" >
+                                    </div>
+                                
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="col-md-7 ">
+                        <div class="card">
+                            
+                        <div class="card">
+                            
+                            
+                            <div id="main" class="layout-horizontal">
+                                
+                                    
+                                <nav class="main-navbar">
+                                    <div class="container">
+                                        <ul>
+                                            
+                                            
+                                            
+                                            <li
+                                                class="menu-item  ">
+                                                <a href="#" class='menu-link'>
+                                                    <i class="bi bi-grid-fill"></i>
+                                                    <span>Dashboards</span>
+                                                </a>
+                                                <div
+                                                class="submenu ">
+                                                
+                                                <div class="submenu-group-wrapper">
+                                                    
+                                                    
+                                                    <ul class="submenu-group">
+                                                        
+                                                        <li
+                                                            class="submenu-item">
+                                                            <a href="index.html"
+                                                                class='submenu-link'>Página Inicial</a>
+            
+                                                            
+                                                            
+                                                           
+                                                        </li>
+                                                        
+                                                    
+                                                    
+                                                        <li
+                                                            class="submenu-item  ">
+                                                            <a href="mapa_de_rede.html"
+                                                                class='submenu-link'>Mapa da Rede</a>
+            
+                                                            
+                                                        </li>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                            
+                                            
+                                            
+                                            <li
+                                                class="menu-item  has-sub">
+                                                <a href="#" class='menu-link'>
+                                                    <i class="bi bi-stack"></i>
+                                                    <span>Ativos de TI</span>
+                                                </a>
+                                                <div
+                                                    class="submenu ">
+                                                    <div class="submenu-group-wrapper">
+                                                        
+                                                        
+                                                        <ul class="submenu-group ">
+                                                            
+                                                            <li
+                                                                class="submenu-item  has-sub">
+                                                                <a href="#"
+                                                                    class='submenu-link'>Informações</a>
+                
+                                                                
+                                                            
+                                                            <ul class="subsubmenu">
+                                                                    
+                                                                <li class="subsubmenu-item ">
+                                                                    <a href="ativos_de_hardware_visao_geral.html" class="subsubmenu-link">Ativos de hardware</a>
+                                                                </li>
+                                                                <li class="subsubmenu-item ">
+                                                                    <a href="ativos_de_software_visao_geral.html" class="subsubmenu-link">Ativos de software</a>
+                                                                </li>
+                                                                                                                         
+                                                                
+                                                               
+                                                                
+                                                                
+                                                            </ul>
+                                                            
+                                                        </li>
+                                                        <li
+                                                        class="submenu-item  has-sub">
+                                                        <a href="#"
+                                                            class='submenu-link'>Estatisticas</a>
+        
+                                                        
+                                                    
+
+                                                    <ul class="subsubmenu">
+                                                            
+                                                        <li class="subsubmenu-item ">
+                                                            <a href="#" class="subsubmenu-link">[X]Utilização</a>
+                                                        </li>
+                                                       
+                                                       
+                                                        
+                                                        
+                                                    </ul>
+                                                    
+                                                </li>
+                                                        
+                                                        
+                                                        
+                                                            
+                                                        </ul>
+                                                        
+                                                        
+                                                      
+                                                                
+                                                            
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            
+                                            
+                                            <li
+                                                class="menu-item active has-sub">
+                                                <a href="#" class='menu-link'>
+                                                    <i class="bi bi-grid-1x2-fill"></i>
+                                                    <span>Segurança</span>
+                                                </a>
+                                                <div
+                                                    class="submenu ">
+                                                    <div class="submenu-group-wrapper">
+                                                        
+                                                        
+                                                        <ul class="submenu-group">
+                                                            
+                                                            <li
+                                                                class="submenu-item  ">
+                                                                <a href="seguranca_visao_geral.html"
+                                                                    class='submenu-link'>Visão Geral</a>
+                
+                                                                
+                                                            </li>
+
+                                                           
+                                                            
+                                                            
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                                                   
+                                          
+                                                                                       
+                                            
+                                            
+                                        </ul>
+                                      
+                                    </div>
+                                </nav>
+                                    
+                                
+                            </div>
+                        
+                             
+                            </div>
+                        
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-1 ">
+                        <div class="card">
+
+
+                  <div class="d-flex align-items-center">
+                    
+                    
+                  </div>
+                
+                           
+                           
+                        </div>
+                        </div>
+                        <div class="col-md-1 ">
+                        <div class="card">
+
+
+                  
+                
+                            <div class="ms-3 name">
+                                <h6 class="text-muted mb-0">@suporte</h6>
+                              </div>
+                            <div class="theme-toggle d-flex gap-2  justify-content-end mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2" opacity=".3"></path><g transform="translate(-210 -1)"><path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path><circle cx="220.5" cy="11.5" r="4"></circle><path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path></g></g></svg>
+                                <div class="form-check form-switch fs-6">
+                                    <input class="form-check-input  me-0" type="checkbox" id="toggle-dark" >
+                                    <label class="form-check-label" ></label>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"></path></svg>
+                            </div>
+                        </div>
+                        </div>
+                       
+        
+        
+                    </div>
+                
+        
+        
+        
+                </div>
+                   
+            
+                       
+        
+                        
+                       
+                    </div>
+
+
+     
+        <div class="col-12 col-lg-3">
+                        
+               
+             
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title" id="emailCompose">Dados do monitoramento</h4>
+                          
+                        </div>
+                        <div class="card-body">
+                            <div class="row ">
+                               
+                                <div class="col-md-12 ">
+                             
+                              
+                                    
+                                </div>
+                                
+                                <div class="col-md-8 ">
+                                    <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">VERSAO:</h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">STATUS: </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">INTERVALO:  </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">ULTIMA VERIFICACAO: </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left"></h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left"></h6>
+                                   
+    
+                                </div>
+                                <div class="col-md-4 "> 
+                                    <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">1.0 Alpha</h6>
+                                   <h6 id="status_sistema" class="text-muted font-semibold d-flex align-items-left justify-content-left">OFFLINE</h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">5 HORAS</h6>
+                                   <h6 id="log_data_verificacao" class="text-muted font-semibold d-flex align-items-left justify-content-left"></h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left"></h6>                                   
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left"></h6>
+                                </div>
+                                <div class="col-md-8 ">
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">ATIVOS ENCONTRADOS: </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">ATIVOS VERIFICADOS: </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">ATIVOS CADASTRADOS: </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">ATIVOS ATUALIZADOS: </h6>
+                                   <h6 class="text-muted font-semibold d-flex align-items-left justify-content-left">ATIVOS COM ERRO: </h6> 
+                                   
+    
+                                </div>
+                                <div class="col-md-4 "> 
+                                   <h6 id="log_total_descoberto"  class="text-muted font-semibold d-flex align-items-left justify-content-left">-</h6>
+                                   <h6 id="log_total_verificado" class="text-muted font-semibold d-flex align-items-left justify-content-left">-</h6>
+                                   <h6 id="log_total_cadastrado" class="text-muted font-semibold d-flex align-items-left justify-content-left">-</h6>
+                                   <h6 id="log_total_atualizado" class="text-muted font-semibold d-flex align-items-left justify-content-left">-</h6>
+                                   <h6 id="log_total_erro" class="text-muted font-semibold d-flex align-items-left justify-content-left">-</h6>
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+            
+           
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title" id="emailCompose">Últimas verificações</h4>
+                          
+                        </div>
+                        <div class="card-body">
+                            <div class="row ">
+                               
+                                <div class="col-md-12 ">
+                             
+                                    <div class="card-body px-2 py-3-4">
+                                        <div id="grafico-barra33"></div>
+                                    </div>
+                                    
+                                </div>
+                                
+                             
+                                
+    
+                            </div>
+                        </div>
+            
+           
+                    </div>
+    </div>
+        <div class="col-12 col-lg-6">
+           
+            <div class="row">
+                <div class="col-2">
+                <div class="card">
+                            
+                    <div class="card-body px-2 py-3-4">
+                        <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center"><span id="total_ativos">-</span></h1>
+                        <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">Computadores</h7>
+                        
+                        
+                    </div>
+                    
+                </div> 
+                <div class="card">
+                            
+                    <div class="card-body px-2 py-3-4">
+                        <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center"><span id="total_ativos">2</span></h1>
+                        <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">SETORES</h7>
+                        
+                        
+                    </div>
+                    
+                </div>     
+                <div class="card">
+                            
+                    <div class="card-body px-2 py-3-4">
+                        <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center"><span id="total_ativos">3</span></h1>
+                        <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">LOCAIS</h7>
+                        
+                        
+                    </div>
+                    
+                </div>   
+            
+            </div>
+                
+            <div class="col-5">
+
+                <div class="card ">
+                   
+                    <div class="card-body">
+                        <h4 class="card-title" id="emailCompose">Computadores por setor</h4>
+                        <div class="card-body px-2 py-3-4">
+                            <div id="donut-ativos-equipe"></div>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+       
+        </div>
+        <div class="col-5">
+
+            <div class="card ">
+                
+                   
+                  
+               
+                <div class="card-body">
+                    <h4 class="card-title" id="emailCompose">Computadores por local</h4>
+                    <div class="card-body px-2 py-3-4">
+                        <div id="donut-ativos-local"></div>
+                    </div>
+                   
+                </div>
+            </div>
+   
+    </div>
+
+        
+           </div>
+           <div class="row">      
+            <div class="col-5">
+
+                <div class="card ">
+                   
+                    <div class="card-body">
+                        <h4 class="card-title" id="emailCompose">Processadores</h4>
+                        <div class="card-body px-2 py-3-4">
+                            <div id="donut-ativos-proc"></div>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+       
+        </div>
+        <div class="col-5">
+
+            <div class="card ">
+                
+                   
+                  
+               
+                <div class="card-body">
+                    <h4 class="card-title" id="emailCompose">Memórias</h4>
+                    <div class="card-body px-2 py-3-4">
+                        <div id="donut-ativos-memoria"></div>
+                    </div>
+                   
+                </div>
+            </div>
+   
+        </div>
+        
+        <div class="col-2">
+            <div class="card">
+                        
+                <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center"><span id="total_modelos_de_processador">0</span></h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">MODELOS DE PROCESSADOR</h7>
+                    
+                    
+                </div>
+                
+            </div> 
+            <div class="card">
+                        
+                <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center"><span id="total_memorias">0</span></h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">MEMÓRIAS</h7>
+                    
+                    
+                </div>
+                
+            </div>     
+            <div class="card">
+                        
+                <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center"><span id="total_manutencao">2</span></h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">EM MANUTENÇÃO</h7>
+                    
+                    
+                </div>
+                
+            </div>   
+        
+        </div>
+            
+        
+           </div> 
+
+    </div>
+    
+
+    <div class="col-12 col-lg-3">
+           
+                   
+        <div class="col-12">
+
+            <div class="card ">
+                <div class="card-header">
+                    <h4 class="card-title" id="emailCompose">ALERTAS (7 dias) <span id="total_alertas_e_alteracoes" class="badge bg-danger badge-pill badge-round float-right mt-50">0</span></h4>
+                  
+                </div>
+                <div class="card-body">
+                    
+                              
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active " id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">Alteracoes<span id="total_alteracoes_7_dias" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">3</span></a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link " id="contact-tab22" data-bs-toggle="tab" href="#contact22" role="tab22"
+                                aria-controls="contact22" aria-selected="false">Monitoramento<span id="total_alertas_7_dias" class="badge bg-light-secondary  badge-pill badge-round float-right mt-50">3</span></a>
+                        </li>
+                        
+                        
+                        
+                        
+                    </ul>
+                    <div  class="tab-content " id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="table-responsive">
+                                <table id="tabela_informacao_hardware" class="table table-striped mb-0 hide-head">
+                                    <thead class="d-none">
+                                        <tr>
+                                            <th>CODIGO</th>
+                                            <th>MENSAGEM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr>
+                                            <td><h6>Configuracao<span id="total_alteracao_configuracao" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">0</span></h6></td>
+                                            <td id="tabela_so"><button class="btn btn-light-secondary" id="btn-configuracao" data-bs-toggle="modal" data-bs-target="#xlarge">ver todas</button></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td><h6>Hardware<span id="total_alteracao_hardware" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">0</span></h6></td>
+                                            <td id="tabela_version"><button class="btn btn-light-secondary" id="btn-hardware" data-bs-toggle="modal" data-bs-target="#xlarge">ver todas</button></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td><h6>Seguranca<span id="total_alteracao_seguranca" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">0</span></h6></td>
+                                            <td id="tabela_admins"><button class="btn btn-light-secondary" id="btn-seguranca" data-bs-toggle="modal" data-bs-target="#xlarge">ver todas</button></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td><h6>Software<span id="total_alteracao_software" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">0</span></h6></td>
+                                            <td id="tabela_admins"><button class="btn btn-light-secondary" id="btn-softwares" data-bs-toggle="modal" data-bs-target="#xlarge">ver todas</button></td>
+                                           
+                                        </tr>
+                                       
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="contact22" role="tabpanel" aria-labelledby="contact-tab22">
+
+                            <div class="table-responsive">
+                                <table id="tabela_informacao_so" class="table table-striped mb-0 hide-head">
+                                    <thead class="d-none">
+                                        <tr>
+                                            <th>CODIGO</th>
+                                            <th>MENSAGEM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><h6>Despadronizadas<span id="total_alerta_padronizacao" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">0</h6></td>
+                                            <td id="tabela_processador"><button class="btn btn-light-secondary" id="b1" data-bs-toggle="modal" data-bs-target="#xlarge">ver todas</button></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td><h6>Dados Incompletos<span id="total_alerta_dados_incompletos" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">0</h6></td>
+                                            <td id="tabela_mobo"><button class="btn btn-light-secondary" id="btn-hin" data-bs-toggle="modal" data-bs-target="#xlarge">ver todas</button></td>
+                                           
+                                        </tr>
+                                      
+                                      
+                                       
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                
+            </div>
+            </div>
+   
+    </div>
+
+    
+
+
+</div>
+            
+         
+           
+
+</div>
+
+<div class="modal fade text-left w-100" id="xlarge" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel16" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+    role="document">
+    <div class="modal-content" style ="height: 1200px;">
+      
+        <div class="modal-body">
+            
+            
+                <div class="col-md-12 ">
+                  
+                    <div class="card">
+                        
+                        
+                        <div class="card-body">
+                            <div class="card">
+                        
+                        
+                                <div class="card-body ">
+                                    <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable">
+                                        
+                                                
+                                                    
+                                                    <table id="example" class="table table-striped hide-head" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="10%">Tipo</th>
+                                                                <th width="75%">Detalhes da alteracao</th>
+                                                                <th width="15%">Data</th>
+                                                                
+                                                            </tr>
+                                                        </thead>
+                                                   
+                                                    </table>
+                                                
+                                   
+                                </div>
+                            </div>
+                            
+                            </div>
+                            
+                    </div>
+                    
+                    </div>
+                   
+                   
+                </div>
+                
+              
+       
+                   
+                
+        
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light-secondary"
+                data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    </div>
+    <script src="assets/js/app.js"></script>
+    
+    <script src="assets/js/pages/dashboard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.18.1/apexcharts.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="assets/js/pages/datatables.js"></script>
+<script src="assets/js/pages/horizontal-layout.js"></script>
+<script>
+
+
+
+
+
+$.getJSON("http:/localhost:porta/api/donut_ativos_processador/?skip=0&limit=500", function( data ) {
+
+            
+            var options = {
+                chart: { type: "donut", width: "100%", height: "300" },
+                legend: { show: false },
+                plotOptions: { pie: { donut: { size: "30%" } } },
+                labels: data.labels,
+                series: data.series
+            };
+            var chart = new ApexCharts(document.querySelector("#donut-ativos-proc"), options);
+            console.log(data.labels)
+            chart.render();
+        });
+
+$.getJSON("http:/localhost:porta/api/get_donut_memoria_filtrada/?skip=0&limit=500", function( data ) {
+
+            
+            var options = {
+                chart: { type: "donut", width: "100%", height: "300" },
+                legend: { show: true  },
+                plotOptions: { pie: { donut: { size: "30%" } } },
+                labels: data.labels,
+                series: data.series
+            };
+            var chart = new ApexCharts(document.querySelector("#donut-ativos-memoria"), options);
+            console.log(data.labels)
+            chart.render();
+});
+
+
+$.getJSON("http:/localhost:porta/api/donut_ativos_equipe/?skip=0&limit=500", function( data ) {
+
+            
+var options = {
+    chart: { type: "donut", width: "100%", height: "300" },
+    legend: { show: true },
+    plotOptions: { pie: { donut: { size: "30%" } } },
+    labels: data.labels,
+    series: data.series
+};
+var chart = new ApexCharts(document.querySelector("#donut-ativos-equipe"), options);
+console.log(data.labels)
+chart.render();
+});
+
+$.getJSON("http:/localhost:porta/api/donut_ativos_local/?skip=0&limit=500", function( data ) {
+
+            
+var options = {
+    chart: { type: "donut", width: "100%", height: "300" },
+    legend: { show: true },
+    plotOptions: { pie: { donut: { size: "30%" } } },
+    labels: data.labels,
+    series: data.series
+};
+var chart = new ApexCharts(document.querySelector("#donut-ativos-local"), options);
+console.log(data.labels)
+chart.render();
+});
+
+
+$.getJSON("http:/localhost:porta/api/testebar/?skip=0&limit=500", function( data ) {
+
+            
+var options = {
+    chart: { type: "bar", width: "100%", height: "300" },
+
+    plotOptions: {
+                        bar: {
+                          horizontal: false,
+                          borderRadius: 1
+                        }},
+                        xaxis: {
+                        type: 'string',
+                        categories: data.labels,
+                      },
+    series: data.series
+};
+var chart = new ApexCharts(document.querySelector("#grafico-barra33"), options);
+console.log(data.labels)
+chart.render();
+});
+
+
+
+        $.getJSON("http:/localhost:porta/api/estatisticas/?skip=0&limit=100", function( data ) {
+            console.log(data.total_monitorados);
+            $("#total_online").text(data.total_online);
+            $("#total_offline").text(data.total_offline);
+            $("#total_ativos").text(data.total_monitorados);
+            $("#total_monitorados").text(data.total_monitorados);
+            $("#total_desktops").text(data.total_desktops);
+            $("#total_notebooks").text(data.total_notebooks);
+            $("#total_memorias").text(data.total_memorias);
+            $("#total_manutencao").text(data.total_manutencao);
+            $("#total_modelos_de_processador").text(data.total_modelos_de_processador);
+            $("#log_data_verificacao").text(data.log_data_verificacao);
+            $("#log_total_descoberto").text(data.log_total_descoberto);
+            $("#log_total_verificado").text(data.log_total_verificado);
+            $("#log_total_atualizado").text(data.log_total_atualizado);
+            $("#log_total_cadastrado").text(data.log_total_cadastrado);
+            $("#log_total_erro").text(data.log_total_erro);
+            $("#status_sistema").text("ONLINE");
+            
+            
+
+           
+        });
+
+        $.getJSON("http:/localhost:porta/api/total_de_alertas_7_dias/", function( data ) {
+            console.log(data.total_alteracao_software);
+            $("#total_alertas_e_alteracoes").text(data.total_alertas_e_alteracoes);
+            $("#total_alertas_7_dias").text(data.total_alertas_7_dias);
+            $("#total_alteracoes_7_dias").text(data.total_alteracoes_7_dias);
+            $("#total_alerta_padronizacao").text(data.total_alerta_padronizacao);
+            $("#total_alerta_dados_incompletos").text(data.total_alerta_dados_incompletos);
+            $("#total_alteracao_configuracao").text(data.total_alteracao_configuracao);
+            $("#total_alteracao_hardware").text(data.total_alteracao_hardware);
+            $("#total_alteracao_seguranca").text(data.total_alteracao_seguranca);
+            $("#total_alteracao_software").text(data.total_alteracao_software);
+            
+            
+
+           
+        });
+
+
+
+
+$(document).ready(function () {
+
+
+$('#xlarge').on('shown.bs.modal', function(e){
+    $($.fn.dataTable.tables(true)).DataTable()
+      .columns.adjust();
+
+});    
+
+$("#b1").click(function(){
+
+
+    table.destroy();
+    table = $('#example').DataTable({
+      ajax: "http:/localhost:porta/api/alertas_de_padrao/",
+      columns: [
+           { "data": "tipo" },
+           { "data": "detalhes_alteracao" },
+           { "data": "data_alteracao" },
+      ],pageLength: 8,
+            fixedHeader: {
+            footer: false
+            },  
+              responsive: false,
+              scrollY:        '50vh',
+              scrollCollapse: false,
+              paging:         false,
+              autoWidth:      false,
+              order: [[ 2, 'dsc' ]]
+  }); 
+ 
+   table.columns.adjust(); 
+
+
+});  
+
+
+$("#btn-hin").click(function(){
+
+
+table.destroy();
+table = $('#example').DataTable({
+  ajax: "http:/localhost:porta/api/alertas_de_hin/",
+  columns: [
+       { "data": "tipo" },
+       { "data": "detalhes_alteracao" },
+       { "data": "data_alteracao" },
+  ],pageLength: 8,
+        fixedHeader: {
+        footer: false
+        },  
+          responsive: false,
+          scrollY:        '50vh',
+          scrollCollapse: false,
+          paging:         false,
+          autoWidth:      false,
+          order: [[ 2, 'dsc' ]]
+}); 
+
+table.columns.adjust(); 
+
+
+});  
+
+
+$("#btn-seguranca").click(function(){
+
+
+table.destroy();
+table = $('#example').DataTable({
+  ajax: "http:/localhost:porta/api/alteracoes_de_seguranca/",
+  columns: [
+       { "data": "tipo" },
+       { "data": "detalhes_alteracao" },
+       { "data": "data_alteracao" },
+  ],pageLength: 8,
+        fixedHeader: {
+        footer: false
+        },  
+          responsive: false,
+          scrollY:        '50vh',
+          scrollCollapse: false,
+          paging:         false,
+          autoWidth:      false,
+          order: [[ 2, 'dsc' ]]
+}); 
+
+table.columns.adjust(); 
+
+
+}); 
+
+
+$("#btn-softwares").click(function(){
+
+
+table.destroy();
+table = $('#example').DataTable({
+  ajax: "http:/localhost:porta/api/alteracoes/software/",
+  columns: [
+       { "data": "tipo" },
+       { "data": "detalhes_alteracao" },
+       { "data": "data_alteracao" },
+  ],pageLength: 8,
+        fixedHeader: {
+        footer: false
+        },  
+          responsive: false,
+          scrollY:        '50vh',
+          scrollCollapse: false,
+          paging:         false,
+          autoWidth:      false,
+          order: [[ 2, 'dsc' ]]
+}); 
+
+table.columns.adjust(); 
+
+
+}); 
+
+
+$("#btn-hardware").click(function(){
+
+
+table.destroy();
+table = $('#example').DataTable({
+  ajax: "http:/localhost:porta/api/alteracoes_de_hardware/",
+  columns: [
+       { "data": "tipo" },
+       { "data": "detalhes_alteracao" },
+       { "data": "data_alteracao" },
+  ],pageLength: 8,
+        fixedHeader: {
+        footer: false
+        },  
+          responsive: false,
+          scrollY:        '50vh',
+          scrollCollapse: false,
+          paging:         false,
+          autoWidth:      false,
+          order: [[ 2, 'dsc' ]]
+}); 
+
+table.columns.adjust(); 
+
+
+}); 
+
+
+
+$("#btn-configuracao").click(function(){
+
+
+table.destroy();
+table = $('#example').DataTable({
+  ajax: "http:/localhost:porta/api/alteracoes_de_configuracao/",
+  columns: [
+       { "data": "alteracao" },
+       { "data": "detalhes_alteracao" },
+       { "data": "data_alteracao" },
+  ],pageLength: 8,
+        fixedHeader: {
+        footer: false
+        },  
+          responsive: false,
+          scrollY:        '50vh',
+          scrollCollapse: false,
+          paging:         false,
+          autoWidth:      false,
+          order: [[ 2, 'dsc' ]]
+}); 
+
+table.columns.adjust(); 
+
+
+}); 
+
+
+
+var table = $('#example').DataTable({
+      ajax: "http:/localhost:porta/api/alteracoes_de_configuracao/",
+      columns: [
+           { "data": "alteracao" },
+           { "data": "detalhes_alteracao" },
+           { "data": "data_alteracao" },
+      ],pageLength: 8,
+            fixedHeader: {
+            header: false,
+            footer: false
+            },  
+              responsive: false,
+              scrollY:        '50vh',
+              scrollCollapse: false,
+              paging:         false,
+              autoWidth:      false,
+              order: [[ 2, 'dsc' ]]
+  }); 
+
+})
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

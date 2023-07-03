@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFRAstat - Controle dos ativos de TI do LabTrans</title>
+    
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="stylesheet" href="assets/css/main/app-dark.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    
+<link rel="stylesheet" href="assets/css/shared/iconly.css">
+<link rel="stylesheet" href="assets/css/pages/datatables.css">
+<link rel="stylesheet" href="assets/css/pages/email.css">
+<link rel="stylesheet" href="assets/css/pages/fontawesome.css">
+<style>
+    .fontawesome-icons {
+        text-align: center;
+    }
+
+    article dl {
+        background-color: rgba(0, 0, 0, .02);
+        padding: 20px;
+    }
+
+    .fontawesome-icons .the-icon {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+</style>
+
+</head>
+
+<body>
+  
+        <div id="">
+        
+            
+<div class="page-heading">
+    
+       
+</div>
+<div class="page-content">
+   
+               
+    <section class="row">
+        <div class="col-12">
+
+            <div class="col-12">
+                
+
+               
+                              
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="card">
+                            
+                        
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-center">
+                                        <img class="w-50 text-center" src="assets/images/faces/logito.png" id="logo12" >
+                                    </div>
+                                
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="col-md-7 ">
+                        <div class="card">
+                            
+                        <div class="card">
+                            
+                            <div id="main" class="layout-horizontal">
+                                
+                                    
+                                <nav class="main-navbar">
+                                    <div class="container">
+                                        <ul>
+                                            
+                                            
+                                            
+                                            <li
+                                                class="menu-item  ">
+                                                <a href="#" class='menu-link'>
+                                                    <i class="bi bi-grid-fill"></i>
+                                                    <span>Dashboards</span>
+                                                </a>
+                                                <div
+                                                class="submenu ">
+                                                
+                                                <div class="submenu-group-wrapper">
+                                                    
+                                                    
+                                                    <ul class="submenu-group">
+                                                        
+                                                        <li
+                                                            class="submenu-item">
+                                                            <a href="index.html"
+                                                                class='submenu-link'>Página Inicial</a>
+            
+                                                            
+                                                            
+                                                           
+                                                        </li>
+                                                        
+                                                    
+                                                    
+                                                        <li
+                                                            class="submenu-item  ">
+                                                            <a href="mapa_de_rede.html"
+                                                                class='submenu-link'>Mapa da Rede</a>
+            
+                                                            
+                                                        </li>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                            
+                                            
+                                            
+                                            <li
+                                                class="menu-item  has-sub">
+                                                <a href="#" class='menu-link'>
+                                                    <i class="bi bi-stack"></i>
+                                                    <span>Ativos de TI</span>
+                                                </a>
+                                                <div
+                                                    class="submenu ">
+                                                    <div class="submenu-group-wrapper">
+                                                        
+                                                        
+                                                        <ul class="submenu-group ">
+                                                            
+                                                            <li
+                                                                class="submenu-item  has-sub">
+                                                                <a href="#"
+                                                                    class='submenu-link'>Visão Geral</a>
+                
+                                                                
+                                                            
+                                                            <ul class="subsubmenu">
+                                                                    
+                                                                <li class="subsubmenu-item ">
+                                                                    <a href="ativos_de_hardware_visao_geral.html" class="subsubmenu-link">Hardware</a>
+                                                                </li>
+                                                                <li class="subsubmenu-item ">
+                                                                    <a href="ativos_de_software_visao_geral.html" class="subsubmenu-link">Software</a>
+                                                                </li>
+                                                                                                                         
+                                                                
+                                                               
+                                                                
+                                                                
+                                                            </ul>
+                                                            
+                                                        </li>
+                                                        <li
+                                                        class="submenu-item  has-sub">
+                                                        <a href="#"
+                                                            class='submenu-link'>Estatisticas</a>
+        
+                                                        
+                                                    
+
+                                                    <ul class="subsubmenu">
+                                                            
+                                                        <li class="subsubmenu-item ">
+                                                            <a href="#" class="subsubmenu-link">[X]Utilização</a>
+                                                        </li>
+                                                       
+                                                       
+                                                        
+                                                        
+                                                    </ul>
+                                                    
+                                                </li>
+                                                        
+                                                        
+                                                        
+                                                            
+                                                        </ul>
+                                                        
+                                                        
+                                                      
+                                                                
+                                                            
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                            
+                                            
+                                            <li
+                                                class="menu-item active has-sub">
+                                                <a href="#" class='menu-link'>
+                                                    <i class="bi bi-grid-1x2-fill"></i>
+                                                    <span>Segurança</span>
+                                                </a>
+                                                <div
+                                                    class="submenu ">
+                                                    <div class="submenu-group-wrapper">
+                                                        
+                                                        
+                                                        <ul class="submenu-group">
+                                                            
+                                                            <li
+                                                                class="submenu-item  ">
+                                                                <a href="seguranca_visao_geral.html"
+                                                                    class='submenu-link'>Visão Geral</a>
+                
+                                                                
+                                                            </li>
+
+                                                           
+                                                            
+                                                            
+                                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
+                                                                                   
+                                          
+                                                                                       
+                                            
+                                            
+                                        </ul>
+                                      
+                                    </div>
+                                </nav>
+                                    
+                                
+                            </div>
+                        
+                             
+                            </div>
+                        
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-1 ">
+                        <div class="card">
+
+
+                  <div class="d-flex align-items-center">
+                    
+                    
+                  </div>
+                
+                           
+                           
+                        </div>
+                        </div>
+                        <div class="col-md-1 ">
+                        <div class="card">
+
+
+                  
+                
+                            <div class="ms-3 name">
+                                <h6 class="text-muted mb-0">@suporte</h6>
+                              </div>
+                            <div class="theme-toggle d-flex gap-2  justify-content-end mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2" opacity=".3"></path><g transform="translate(-210 -1)"><path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path><circle cx="220.5" cy="11.5" r="4"></circle><path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path></g></g></svg>
+                                <div class="form-check form-switch fs-6">
+                                    <input class="form-check-input  me-0" type="checkbox" id="toggle-dark" >
+                                    <label class="form-check-label" ></label>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"></path></svg>
+                            </div>
+                        </div>
+                        </div>
+                       
+        
+        
+                    </div>
+                
+        
+        
+        
+                </div>
+                   
+            
+                       
+        
+                        
+                       
+                    </div>
+
+
+     
+        <div class="col-12 col-lg-2">
+                        
+               
+             
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row ">
+                               
+                            
+                               
+                                <div class="col-md-12 "> 
+                                    <a href="configurar_softwares.html" class="remove_button btn btn-primary d-flex align-items-center justify-content-center" type="button">Configurar softwares monitorados</a>
+                                </div>
+                                <h1></h1>
+                                <div class="col-md-12 "> 
+                                    <a href="normalizar_devs.html" class="remove_button btn btn-primary d-flex align-items-center justify-content-center" type="button">Normalizar desenvolvedores</a>
+                                </div>
+                                <h1></h1>
+                                <div class="col-md-12 ">  
+                                    <a href="normalizar_softwares.html" class="remove_button btn btn-primary d-flex align-items-center justify-content-center" type="button">Normalizar softwares</a>
+                                </div>
+                               
+                                
+    
+                            </div>
+                        </div>
+            
+           
+        </div>
+    </div>
+        <div class="col-12 col-lg-10">
+           
+                   
+            <div class="col-12">
+
+                <div class="card ">
+                    <div class="card-body">
+                        
+                        <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns ">
+                            
+                                    <div class="dataTable-container">
+                                        
+                                        <table id="tabela_principal_de_softwares" class="table table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>id</th>
+                                                    <th>Instalações</th>
+                                                    <th>Nome do Software</th>
+                                                    <th>Desenvolvedor</th>
+                                                    <th>Tipo</th>
+                                                    <th>Licenciamento</th>
+                                                    <th>Irregular</th>
+                                                    <th>Ações</th>
+                                                </tr>
+                                            </thead>
+                                       
+                                        </table></div>
+                       
+                    </div>
+                </div>
+       
+</div>
+
+
+</div>
+            
+         
+           
+
+</div>
+
+
+<div class="modal fade text-left w-100" id="modal_janela_lic_nova" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel16" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+    role="document">
+    <div class="modal-content" style ="height: 700px;">
+      
+        <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="row">
+                    <div class="col-md-12 ">
+                      
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-7 "> 
+                                    
+                          
+                       
+                            <div class="card-body px-2 py-3-4">
+                                <h6 id="nome_do_software" class="text-muted font-semibold d-flex align-items-center justify-content-start">GERENCIAR LICENÇAS DE SOFTWARE</h6>
+                                <h1 class="card-title" id="nome_superior" >-
+
+                                </h1>
+                                
+                                <h6 id="dev_superior" class="text-muted font-semibold d-flex align-items-center justify-content-start">-</h6>
+                                <div class="btn-group mb-3 btn-group" role="group" ><button type="button" id="bclickaddlic" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic">Nova licença adquirida</button>                                        </div>
+                              
+                            
+                        </div> 
+            
+            
+            
+                       </div>
+                           <div class="col-md-4"> 
+                            
+                            <a data-bs-toggle="tooltip" title="Tipo de ativo"><h6></h6><span class=" d-flex  badge bg-light-primary justify-content-start">STATUS DE LICENÇAS<i class="fa fa-fw"></i><span id="status_titulo"></span></span></h6></a>
+                            <a data-bs-toggle="tooltip" title="Tipo de ativo"><h6></h6><span class=" d-flex  badge bg-light-primary justify-content-start">Adquiridas:<i class="fa fa-fw"></i><span id="adquiridas_superior">-</span></span></h6></a>
+                            <a data-bs-toggle="tooltip" title="Tipo de ativo"><h6></h6><span class=" d-flex  badge bg-light-primary justify-content-start">Cadastradas:<i class="fa fa-fw"></i><span id="cadastradas_superior">-</span></span></h6></a>
+                            <a data-bs-toggle="tooltip" title="Tipo de ativo"><h6></h6><span class=" d-flex  badge bg-light-primary justify-content-start">Disponiveis:<i class="fa fa-fw"></i><span id="disponiveis_superior">-</span></span></h6></a>
+                            
+                            
+                            
+                        
+
+                        </div> 
+
+                        
+                     
+                    
+                    
+                    
+                    </div>
+                      
+                    </div>
+                    </div>
+                  
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                  
+                    <div class="card">
+                        
+                        
+                            <div class="card-body">
+                              
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                                            aria-controls="home" aria-selected="true">Adquiridas<span id="badge_total_adquiridas" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">-</span></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="contact-tab22" data-bs-toggle="tab" href="#contact22" role="tab22"
+                                            aria-controls="contact22" aria-selected="false">Disponíveis<span id="badge_total_disponiveis" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">-</span></a>
+                                    
+                                        </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="contact-tab2" data-bs-toggle="tab" href="#contact2" role="tab"
+                                            aria-controls="contact2" aria-selected="false">Aplicadas<span id="badge_total_aplicadas" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">-</span></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="contact-tab2" data-bs-toggle="tab" href="#reservadas" role="tab"
+                                            aria-controls="reservadas" aria-selected="false">Reservadas<span id="badge_total_reservadas" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">-</span></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="contact-tab2" data-bs-toggle="tab" href="#ativos_sem_lic" role="tab"
+                                            aria-controls="ativos_sem_lic" aria-selected="false">Sem licença<span id="badge_total_ativos_sem_lic" class="badge bg-light-secondary badge-pill badge-round float-right mt-50">-</span></a>
+                                    </li>
+                                   
+                                  
+                                    
+                                </ul>
+                                <div  class="tab-content " id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        
+                                        <div class="table-responsive">
+                                                <table class="table table-striped mb-0 w-auto" id="tabela_janela_lic">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="display:none" ></th>
+                                                            <th style="width:  30%">Versao</th>
+                                                            <th style="width:  10%">Tipo</th>
+                                                            <th style="width:  20%">Data de aquisição</th>
+                                                            <th style="width:  10%">Adquiridas</th>
+                                                            <th style="width:  10%">Cadastradas</th>
+                                                            <th style="width:  10%">Cadastrar Licença</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                       
+                                                     
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                    
+                                        
+                                    </div>
+                                  
+                                   
+                                    <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped mb-0 " id="tabela_janela_lic_aplicadas">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="display:none" ></th>
+                                                        <th style="width:  30%">Hostname</th>
+                                                        <th style="width:  40%">User / Chave</th>
+                                                        <th style="width:  20%">Data de aplicação</th>
+                                                        <th style="width:  10%">Ações</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                   
+                                                 
+                                                </tbody>
+                                             </table>
+                                            </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="reservadas" role="tabpanel" aria-labelledby="contact-tab2">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped mb-0 " id="tabela_janela_lic_reservadas">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="display:none" ></th>
+                                                        <th style="display:none" ></th>
+                                                        <th style="display:none" ></th>
+                                                        <th style="display:none" ></th>
+                                                        <th style="width:  40%">User / Chave</th>
+                                                        <th style="width:  50%">Observações</th>
+                                                        <th style="width:  10%">Ações</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                   
+                                                 
+                                                </tbody>
+                                             </table>
+                                            </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="ativos_sem_lic" role="tabpanel" aria-labelledby="contact-tab2">
+                                        <h6></h6>
+                                        <h6  class="text-muted font-semibold d-flex align-items-center justify-content-start">Licenças de volume disponiveis: &nbsp;<span id="mensagem_lic_volume_indisponivel">-</span></h6>
+                                        
+                                        <div class="btn-group mb-3 btn-group" id="div_botao_desabilitado_lic_volume" role="group" ><button type="button" class="btn btn-secondary" disabled data-bs-toggle="modal" data-bs-target="#modal_janela_lic">Licenças insuficientes, aplique manualmente na aba disponíveis</button>                                        </div>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-striped mb-0 " id="tabela_janela_lic_ativos_sem_lic">
+                                                <div class="btn-group mb-3 btn-group" id="div_button_aplicar_volume_em_todos" role="group" ><button type="button" id="click_aplicar_volume_em_todos" class="btn btn-primary">Aplicar licença de volume em todos os ativos sem licença</button>                                        </div>
+                                                <thead>
+                                                    <tr>
+                                                        <th style="display:none" ></th>
+                                                        <th style="width:  30%">Hostname</th>
+                                                        <th style="width:  30%">IP</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                   
+                                                 
+                                                </tbody>
+                                             </table>
+                                            </div>
+                                    </div>
+                                    <h6 ></h6>
+                                    
+                                    <div class="tab-pane fade" id="contact22" role="tabpanel" aria-labelledby="contact-tab22">
+                                        <div class="table-responsive">
+                                        <table class="table table-striped mb-0 " id="tabela_janela_lic_disponiveis">
+                                            <thead>
+                                                <tr>
+                                                    <th style="display:none" ></th>
+                                                    <th style="display:none" ></th>
+                                                    <th style="width:  50%">User / Chave</th>
+                                                    <th style="width:  20%">Tipo de licenca</th>
+                                                    <th style="width:  20%">Modalidade</th>
+                                                    <th style="width:  10%">Ações</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                               
+                                             
+                                            </tbody>
+                                         </table>
+                                        <div id="div_tabela_janela_lic_disponiveis_total">  
+                                        <table class="table table-striped mb-0 " id="tabela_janela_lic_disponiveis_total">
+                                            <thead class="d-none">
+                                                <tr>
+                                                    <th style="display:none" ></th>
+                                                    <th style="display:none" ></th>
+                                                    <th style="width:  50%">User / Chave</th>
+                                                    <th style="width:  20%">Tipo de licenca</th>
+                                                    <th style="width:  20%">Modalidade</th>
+                                                    <th style="width:  10%">Ações</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                               
+                                             
+                                            </tbody>
+                                         </table>
+                                        </div> 
+                                        </div>
+                                        
+
+                                    </div>
+                                   
+
+                                </div>
+
+                            
+                        </div>
+                    
+                    </div>
+                   
+                    <div class="col-md-6 "> 
+                  </div>
+                </div>
+                </div>
+              
+        </div>
+          </div>
+          
+                   
+                
+        
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light-secondary"
+                data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal fade text-left w-100" id="modal_janela_lic" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel16" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+    role="document">
+    <div class="modal-content" style ="height: 700px;">
+      
+        <div class="modal-body">
+            <div class="container-fluid">
+              
+            <div class="row">
+                <div class="col-md-12 ">
+
+                    <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">Multiple Column</h4>
+                        </div>
+                        <div class="card-content">
+                          <div class="card-body">
+                            <form class="form" id="form_adiciona_license">
+                              <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group" id="divid">
+                                        <label for="disabledInput">ID:</label>
+                                        <input type="text" class="form-control" id="softwareidinput" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="disabledInput">Sofware</label>
+                                        <input type="text" class="form-control" id="nomesoftwareinput" readonly="readonly"
+                                            value="Windows 10">
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="basicInput">Versao adquirida</label>
+                                        <input type="text" class="form-control"  id="versaoinput" placeholder="">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="basicInput">Valor total</label>
+                                        <input type="number" class="form-control"  id="valorinput" placeholder="R$">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="basicInput">Total de licenças adquiridas</label>
+                                        <input type="number" class="form-control"  id="totalinput" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="basicInput">Tipo de license</label><div class="card-body">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" value="dispositivo" name="radiotipo" id="flexRadioDefault1">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                Dispositivo
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" value="usuario" name="radiotipo" id="flexRadioDefault2" >
+                                              <label class="form-check-label" for="flexRadioDefault2">
+                                                Usuario
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" value="volume" name="radiotipo" id="flexRadioDefault2" >
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                  Volume
+                                                </label>
+                                            </div>
+                                                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                               
+                                <div class="col-md-6 col-12">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-floating">
+                                            Informacoes
+                                            
+                                                <textarea name="info" id="info" value="" class="form-control" placeholder="Leave a comment here" ></textarea>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="basicInput">Modalidade</label><div class="card-body">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" value="perpetuo" name="radiomodalidade" id="modalidade1">
+                                              <label class="form-check-label" for="flexRadioDefault1">
+                                                Licença perpétua
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="radio" value="assinatura" name="radiomodalidade" id="modalidade2" >
+                                              <label class="form-check-label" for="flexRadioDefault2">
+                                                Assinatura
+                                              </label>
+                                            </div>
+                                          
+                                    </div>
+            
+                                   
+            
+                                    
+                                </div>
+
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="disabledInput">Data de aquisição</label>
+                                        <input type="date" required autofocus class="form-control" id="dataaquisicaoinput" 
+                                            value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group" id="divexp">
+                                        <label for="basicInput">Data de expiração</label>
+                                        <input type="date" class="form-control" id="dataexpinput" placeholder="Data de expiração da assinatura">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 d-flex justify-content-end">
+                                  <button type="submit"  class="btn btn-primary me-1 mb-1 " >
+                                    Cadastrar
+                                  </button>
+                                  <button type="button" class="btn btn-light-secondary me-1 mb-1 " data-bs-toggle="modal" data-bs-target="#modal_janela_lic_nova">
+                                    Voltar
+                                  </button>
+                                </div>
+                               </div>
+                               
+
+                              </div>
+                           
+                         </form>
+                          
+                        </div>
+                      </div>
+                    
+             
+                </div>
+                </div>
+              
+        </div>
+          
+          
+                   
+                
+        
+        
+       
+    </div>
+</div>
+</div></div>
+
+<div class="modal fade text-left w-100" id="modal_janela_lic_aplicar" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel16" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+    role="document">
+    <div class="modal-content" style ="height: 700px;">
+      
+        <div class="modal-body">
+            <div class="container-fluid">
+              
+            <div class="row">
+                <div class="col-md-12 ">
+                  
+                    <div class="card">
+                        
+                        
+                            <div class="card-body">
+                             
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                      
+                                       
+                                         <div class="row">
+                                            <div class="col-md-7 titulo "> 
+                                              <div class="card-body px-2 py-3-4">
+                                                    <h6 class="text-muted font-semibold d-flex align-items-center justify-content-start">APLICAR LICENÇA DE SOFTWARE</h6>
+                                                    <h1 class="card-title" id="apl_sup_nome" >-</h1>
+                                                    
+                                                    <h6 class="text-muted font-semibold d-flex align-items-center justify-content-start">Licença de &nbsp;<span id="apl_sup_tipo"></span></h6>
+                                                    
+                                              </div>
+                                            </div>
+                                
+                                
+                                            
+                                            <div class="col-md-5"> 
+                                              
+                                                <div class="card-body px-2 py-3-4">
+                                                    
+                                                        <h6 id="apl_sup_modalidade_div" class="text-muted font-semibold d-flex align-items-center justify-content-start">Modalidade: &nbsp;<span id="apl_sup_modalidade">-</span></h6>
+                                                        <h6 id="apl_sup_exp_div" class="text-muted font-semibold d-flex align-items-center justify-content-start">Expira em &nbsp;<span id="apl_sup_exp">-</span></h6>
+                                                        
+                                                   
+                                                      
+                                                    
+                                                    </div>    
+                                                        
+                                                   
+                                            </div>
+                                        </div>      
+                                            
+                    
+                                            
+                    
+                                            </div>
+                                                 <div class="row">
+                                                    <div class="col-md-12 " id="aplicar_license_form">
+                                                        <form id="form_apl" method="post" action="http:/localhost:porta/api/aplicar_license" role="form">
+                                                            
+                                                                <div>
+                                                                    
+                                                                    
+                                                                      <div style="visibility:hidden;"><input type="text"  name="license_id" id="apl_id" value="">id da license adquirida</div>
+                                                                      
+                                                                      <div class="row">
+                                                                        
+                                                                            <div class="input-group mb-3" id="apl_chave_div">
+                                                                              <span class="input-group-text" >User / Chave:</span>
+                                                                              <span type="text" class="form-control" name="chave" id="apl_chave" >-</span>
+                                                                            </div>
+                                                                          
+                                                                        
+                                                                        <div class="input-group mb-3" id="apl_info_div">
+                                                                            <span class="input-group-text" >Informações:</span>
+                                                                            <span type="text" class="form-control" name="info" id="apl_info" >-</span>
+                                                                            
+                                                                          </div>
+                                                                            
+                                                                        
+                                                                      </div>
+                                                                      
+                                                                      <h1 class="card-title"  >Aplicar esta licença em:</h1>
+                                                                      <div class="input-group mb-3">
+                                                                        
+                                                                        <label class="input-group-text" for="apl_select">Ativo:</label>
+                                                                        <select required autofocus class="form-select" name="ativo" id="apl_select">
+                                                                          <option disabled selected value> Selecione um ativo </option>
+                                                                        </select>
+                                                                      </div>
+                                                                      <div style="visibility:hidden;"><input type="text"  name="tipo" id="apl_tipo" value="">tipo da license</div>    
+                                                                      
+                                                                </div>
+                                                            <div class="col-12 d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-primary me-1 mb-1 " >
+                                                                  Aplicar
+                                                                </button>
+                                                                <button type="button" class="btn btn-light-secondary me-1 mb-1 " data-bs-toggle="modal" data-bs-target="#modal_janela_lic_nova">
+                                                                    Voltar
+                                                                  </button></form>
+                                                             
+                                                            
+                                                        
+                                                        
+                                                       
+                                                    </div></div>
+                    
+                                                    <div class="col-md-12 " id="reservar_license_form">
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        <form id="form_res" method="post" action="http:/localhost:porta/api/reservar_license" role="form">
+                                                            
+                                                            <div style="visibility:hidden;"><input type="text"  name="license_id" id="res_id" value="">id da license adquirida</div>
+                                                                      
+                                                            <div class="row">
+                                                                
+                                                                    <div class="input-group mb-3">
+                                                                      <span class="input-group-text" >User / Chave:</span>
+                                                                      <span type="text" class="form-control" name="chave" disabled  id="res_chave" ></span>
+                                                                    </div>
+                                                                  
+                                                              
+                                                               
+                                                              
+                                                              
+                                                              
+                                                            </div>
+                                                            
+                                                           
+                                                            <div style="visibility:hidden;"><input type="text"  name="tipo" id="res_tipo" value="">tipo da license</div>  
+                                                            <h1 class="card-title"  >Reservar esta licença</h1>
+                                                            <h6 id="dev_superior" class="text-muted font-semibold d-flex align-items-center justify-content-start">Utilize a reserva de licença caso o ativo que será aplicado não foi encontrado, para ser aplicada posteriormente</h6>
+                                                            <div class="form-group with-title mb-3">
+                                                                <textarea class="form-control" required autofocus name="observacao_reservar" id="observacao_reservar" rows="3"></textarea>
+                                                                <label>Descreva o ativo que irá receber, usuário que irá utilizar e o motivo para reservar a licença</label>
+                                                              </div>
+                                                                
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                                <div class="col-12 d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-primary me-1 mb-1 " >
+                                                                  Reservar
+                                                                </button>
+                                                                <button type="button" class="btn btn-light-secondary me-1 mb-1 " data-bs-toggle="modal" data-bs-target="#modal_janela_lic_nova">
+                                                                    Voltar
+                                                                  </button></form>
+                                                             
+                                                            
+                                                        
+                                                        
+                                                       
+                                                    </div>
+                                              
+                                                </div>
+                                          
+                                         </div>
+                                
+
+
+
+                            
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                </div>
+              
+        </div>
+          </div>
+          
+                   
+                
+        
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light-secondary"
+                data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="modal fade text-left w-100" id="modal_lista_instalacoes" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel16" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+    role="document">
+    <div class="modal-content" style ="height: 700px;">
+      
+        <div class="modal-body">
+            <div class="container-fluid">
+              
+            <div class="row">
+                <div class="col-md-12 ">
+                  
+                    <div class="card">
+                        
+                        
+                            <div class="card-body">
+                             
+                                <div  class="tab-content " id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="table-responsive">
+                                                <table class="table table-striped mb-0 w-auto" id="tabela_lista_instalacoes">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width:  40%">Hostname</th>
+                                                            <th style="width:  20%">IP</th>
+                                                            <th style="width:  20%">Versão</th>
+                                                            <th style="width:  20%">Data de instalação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                       
+                                                     
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                    
+                                        
+                                    </div>
+                                
+                                </div>
+
+                            
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                </div>
+              
+        </div>
+          </div>
+          
+                   
+                
+        
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light-secondary"
+                data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="modal fade text-left w-100" id="modal_janela_lic_mais" tabindex="-1" role="dialog"
+aria-labelledby="myModalLabel16" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+    role="document">
+    <div class="modal-content" style ="height: 700px;">
+      
+        <div class="modal-body">
+            <div class="container-fluid">
+              
+            <div class="row">
+                <div class="col-md-12 ">
+                  
+                    <div class="card">
+                     <div class="row">
+                        <div class="col-md-7 titulo "> 
+                          <div class="card-body px-2 py-3-4">
+                                <h6 id="nome_do_software" class="text-muted font-semibold d-flex align-items-center justify-content-start">GERENCIAR LICENÇAS DE SOFTWARE</h6>
+                                <h1 class="card-title" id="nome_superior2" >Nome do software</h1>
+                                
+                                <h6 id="dev_superior" class="text-muted font-semibold d-flex align-items-center justify-content-start">Licença de &nbsp;<span id="tipotitulochave"></span></h6>
+                              
+                          </div>
+                        </div>
+            
+            
+                        
+                        <div class="col-md-5"> 
+                          <div class="card">
+                            
+                                <div class="card-body px-2 py-3-4">
+                                    <div class="row">
+                                        <div class="col-md-6 ">
+                                            <h6 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">Licenças para cadastrar:</h6>
+                                    
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <h2><span id="total_para_cadastrar">-</span></h2> 
+                                    </div>
+                                </div>
+                                <button type="button" id="btadd_via_json" class="btn btn-primary"  >Adicionar via JSON</button>
+                                <button type="button" id="btadd_via_form" class="btn btn-primary"  >Adicionar via Formulário</button>     
+                                    
+                                </div>
+                        </div>
+                    </div>   </div>     
+                        
+
+                        
+
+                        </div>
+                             <div class="row">
+                                <div class="col-md-12 " id="cadastro_via_form">
+                                    
+                                    
+                                    
+                                    <h1 class="card-title"  >Chaves e usuários:</h1>
+                                    <form id="form2" method="post" action="http:/localhost:porta/api/items_via_request_body" role="form">
+                                        <div class="field_wrapper">
+                                            <button type="button" id="bclickaddlic" class=" add_button btn btn-success">+ Licença</button> 
+                                            <div>
+                                                
+                                                
+                                                  <div style="visibility:hidden;"><input type="text"  name="id" id="idchave" value="">id da license adquirida</div>
+                                                  <div style="visibility:hidden;"><input type="text"  name="tipo" id="tipochave" value="">id da license adquirida</div>
+                                                       
+                                                  
+                                            </div>
+                                        </div><div class="col-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary me-1 mb-1 " >
+                                              Cadastrar
+                                            </button>
+                                            <button type="button" class="btn btn-light-secondary me-1 mb-1 " data-bs-toggle="modal" data-bs-target="#modal_janela_lic_nova">
+                                                Voltar
+                                              </button></form>
+                                         
+                                        
+                                    
+                                    
+                                   
+                                </div></div>
+
+                                <div class="col-md-12 " id="cadastro_via_json">
+                                    
+                                    
+                                    
+                                    <h1 class="card-title"  >Enviar em formato Json</h1>
+                                    <h6 id="dev_superior" class="text-muted font-semibold d-flex align-items-center justify-content-start">Adicione as licenças com o json de envio abaixo para enviar grande número de licenças</h6>
+                                    <form id="form3" method="post" action="http:/localhost:porta/api/adicionar_dados_de_licenca_em_licenca_adquirida" role="form">
+                                        
+                                        <div class="form-group with-title mb-3">
+                                            <textarea class="form-control" name="json_enviado" id="texto_enviar_json" rows="3"></textarea>
+                                            <label>{"id": "<span id="id_para_json">-</span>", "tipo":"<span id="tipo_para_json">-</span>", "chaves": ["chave1", "chave2"]}</label>
+                                          </div>
+                                            
+                                        
+                                        
+                                        
+                                        
+                                        
+                                            <div class="col-12 d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary me-1 mb-1 " >
+                                              Cadastrar
+                                            </button>
+                                            <button type="button" class="btn btn-light-secondary me-1 mb-1 " data-bs-toggle="modal" data-bs-target="#modal_janela_lic_nova">
+                                                Voltar
+                                              </button></form>
+                                         
+                                        
+                                    
+                                    
+                                   
+                                </div>
+                          
+                            </div>
+                      
+                     </div>
+                    
+                    
+                   
+                </div>
+                
+               
+          </div> </div>
+          
+                   
+                
+        
+        
+       
+    </div>
+</div>
+
+
+
+
+    </div>
+    <script src="assets/js/app.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.18.1/apexcharts.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="http://localhost/assets/js/jquery.form.js"></script>
+
+<script src="assets/js/pages/datatables.js"></script>
+<script src="assets/js/pages/horizontal-layout.js"></script>
+<script>
+
+    
+$.fn.dataTable.Buttons.defaults.dom.button.className = 'btn btn-sm';
+
+function atualiza_tabela_licenses()
+{   
+    console.log("executou a func")
+    var softwareid = $('#softwareidinput').val()
+    $.getJSON("http:/localhost:porta/api/get_licencas_adquiridas/"+softwareid, function( data ) {
+            
+    
+            $("#tabela_janela_lic > tbody").html("");
+            $("#tabela_janela_aplicadas > tbody").html("");
+            
+            $.each(data.ativos_de_software, function(i, item) { 
+            var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td>').text(item.versao),$('<td>').text(item.tipo),$('<td>').text(item.data_de_aquisicao),$('<td>').text(item.adquiridos),$('<td>').text(item.cadastrados),$('<td><div class="btn-group mb-3 btn-group" role="group" ><button type="button" id="addlic" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_mais"  >+</button>                                          </div></td>')
+                ).appendTo('#tabela_janela_lic');
+            })    
+            
+            
+});
+}
+
+$(document).ready(function () {
+var x = 1
+var softwareid = 0
+$("#btadd_via_json").show()
+$("#btadd_via_form").hide()
+$('#cadastro_via_json').hide()
+$('#cadastro_via_form').show()
+
+$('#user_aplicar_lic').hide()
+
+
+$("#btadd_via_json").click(function(){
+    $('#cadastro_via_json').show()
+    $('#cadastro_via_form').hide()
+    $("#btadd_via_json").hide()
+    $("#btadd_via_form").show()
+   
+});
+
+$("#btadd_via_form").click(function(){
+    $('#cadastro_via_json').hide()
+    $('#cadastro_via_form').show()
+    $("#btadd_via_json").show()
+    $("#btadd_via_form").hide()
+    
+});
+
+$("#click_aplicar_volume_em_todos").click(function(){
+    
+    var data = $('#tabela_janela_lic_ativos_sem_lic tr:gt(0)').map(function() {
+    return {
+        softwareid : softwareid,
+        hostname:  $(this.cells[0]).text(),
+        endereco_ip:  $(this.cells[1]).text()
+    };
+}).get();
+
+
+$.ajax({
+    url: 'http:/localhost:porta/api/aplicar_volume_em_lista_de_ativos/',
+    type: 'POST',
+    data: JSON.stringify(data, null, 4),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    async: false,
+    success: function(msg) {
+        alert(msg);
+    }
+});
+
+    
+});
+ 
+$('#form2').ajaxForm(function (resposta) {
+    console.log(resposta);
+});
+
+$('#form3').ajaxForm(function (resposta) {
+    console.log(resposta);
+});
+$('#form_res').ajaxForm(function (resposta) {
+    console.log(resposta);
+});
+$('#form_apl').ajaxForm(function (resposta) {
+    console.log(resposta);
+});
+
+
+ $("#divexp").hide()  
+ $("#divid").hide() 
+
+ $("#form_adiciona_license").submit(function (event) {
+          var formData = {
+            id_do_software: $("#softwareidinput").val(),
+            nome_do_software: $("#nomesoftwareinput").val(),
+            versao: $("#versaoinput").val(),
+            valor_total: $("#valorinput").val(),
+            total_de_licenses: $("#totalinput").val(),
+            data_aquisicao: $("#dataaquisicaoinput").val(),
+            data_expiracao: $("#dataexpinput").val(),
+            informacoes: $("#info").val(),
+            modalidade: $('input[name="radiomodalidade"]:checked').val(),
+            tipo_de_software: $('input[name="radiotipo"]:checked').val(),
+          };
+          console.log(formData)
+          $.ajax({
+            type: "POST",
+            url: "http:/localhost:porta/api/adicionar_nova_licenca_adquirida/",
+            data: JSON.stringify(formData, null, 4),
+            dataType: "json",
+            encode: true,
+          }).done(function (data) {
+            alert(data),
+            atualiza_tabela_licenses();
+            $("#versaoinput").val(""),
+            $("#valorinput").val(""),
+            $("#totalinput").val(""),
+            $("#dataaquisicaoinput").val(""),
+            $("#dataexpinput").val("")
+            $('#modal_janela_lic').modal('hide');
+            $('#modal_janela_lic_nova').modal('show');
+           
+          });
+      
+          event.preventDefault();
+        });
+
+
+ var table = $('#tabela_principal_de_softwares').DataTable({
+        ajax: "http:/localhost:porta/api/softwares_descobertos2/",
+        order: [[2, 'asc']],
+        columns: [
+             { "data": "id","visible":false },
+             { "data": "instalacoes", width: "1%",
+             render: function (data, type, row) {
+
+              
+                   
+                    return '<h5><span class="align-items-center justify-content-center  badge bg-primary">'+data+'</span></h5></a>';
+             
+
+                
+
+             }
+             },
+             { "data": "nome", 
+             render: function (data, type, row) {
+                return '<h5>'+data+'</h5>';
+
+             }
+            
+             },
+             { "data": "desenvolvedor" },
+             { "data": "tipo_de_software" },
+             { "data": {instalacoes : "instalacoes", proprietario : "proprietario", instalacoes_nao_licenciadas : "instalacoes_nao_licenciadas" },
+             render: function (data, type, row) {
+                
+             if (data.proprietario == true && data.instalacoes_nao_licenciadas > 0 ) {
+                
+             return '<a data-bs-toggle="tooltip" title="Software propriétario, licença requerida"><h6><span class=" d-flex align-items-center justify-content-center  badge bg-dark"><span class="fa-fw select-all fas"></span><span id="total_monitorados">Proprietário</span></span></h6></a><a data-bs-toggle="tooltip" title="Instalações sem licença"><span class="align-items-center justify-content-center  badge bg-danger">Sem licença: '+data.instalacoes_nao_licenciadas+'</span></a>';
+             }                                                      
+             else if (data.proprietario == true ) {
+                
+                return '<a data-bs-toggle="tooltip" title="Software propriétario, licença requerida"><h6><span class=" d-flex align-items-center justify-content-center  badge bg-dark"><span class="fa-fw select-all fas"></span><span id="total_monitorados">Proprietário</span></span></h6></a>';
+                } else {
+                
+            return '';
+            }
+        } },
+             { "data": "blacklist",
+             width: "1%",
+             render: function (data, type, row) {
+                
+                if (data == true) {
+
+                    
+                   
+                return '<h6><span class=" d-flex align-items-center justify-content-center  badge bg-dark"><span class="fa-fw select-all fas"></span></span></h6></a>';
+                }
+                else {
+                   
+               return '';
+               } } },
+
+               { "data": "proprietario",
+             render: function (data, type, row) {
+                
+                if (data == true) {
+                   
+                return '<div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_lista_instalacoes" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_lista_instalacoes">Instalações</button>                 <button type="button" class="btn btn-secondary" id="click_gerenciar_licencas" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_nova">                        Licenças                     </button>                                          </div>';
+                }
+                else {
+                    
+               return '<div class="d-flex align-items-center justify-content-center btn-group mb-3 btn-group-sm" role="group" ><button type="button" id="click_lista_instalacoes" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_lista_instalacoes">Instalações</button>                 <button type="button" class="btn disabled btn-secondary">                        Licenças                     </button>                                          </div>';
+               } } },
+               
+            
+            
+             
+        ],
+        
+        pageLength: 8,
+                responsive: true,
+                scrollY:        '50vh',
+                scrollCollapse: true,
+                paging:         false,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    {extend: 'excel', title: 'ativos-de-hardware-XLS'},
+                    {extend: 'pdf', title: 'Ativos-de-hardware-PDF'},
+
+                    {extend: 'print',
+                    
+                     customize: function (win){
+                            $(win.document.body).css('font-size', '5px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                    }
+                    }
+                ]
+    });
+
+ 
+$("#modalidade1").click(function(){
+  $("#divexp").hide()
+});
+
+$("#modalidade2").click(function(){
+    $("#divexp").show()
+    console.log("foi")
+
+});
+
+
+
+
+
+
+jQuery(function(){
+    $("#benviarform").click(function(){ 
+        
+        var formData = {
+            tipo: $("#softwareinput").val(),
+            username: $('input[name="radiomodalidade"]:checked').val(),
+          };
+          console.log(formData)
+          $.ajax({
+            type: "POST",
+            url: "http:/localhost:porta/api/submit2/",
+            data: JSON.stringify(formData, null, 4),
+            dataType: "json",
+            encode: true,
+          }).done(function (data) {
+            console.log(data);
+          });
+      
+          event.preventDefault();
+
+
+});
+
+
+
+
+
+})
+var tipo = ""
+var maxField = 0;
+
+jQuery(function(){
+$("#tabela_janela_lic").on('click', '#apllics', function () {
+        
+    var $td = $(this).closest('tr').children("td"),
+    len = $td.length;       
+    var tableData23 = ""      
+        
+    tableData23 = $td.map(function(i) {
+        
+        if(i < len -1)
+                return $(this).text() }         
+        ).get();
+    });
+    var idlic = tableData23[0]
+    var tipo = tableData23[2]
+
+
+})
+
+
+jQuery(function(){
+$("#tabela_janela_lic").on('click', '#addlic', function () {
+        console.log("clickei mais")
+        var $td = $(this).closest('tr').children("td"),
+        len = $td.length;       
+        
+        
+        var tableData2 = $td.map(function(i) {
+        
+        if(i < len -1)
+                return $(this).text() }         
+        ).get();
+        
+        
+        while(x > 1){ 
+            $('#deldyn').remove();
+            x--; //Increment field counter
+           
+        }
+        console.log(x)
+        var idlic = tableData2[0]
+        tipo = tableData2[3]
+        var adquiridas = tableData2[5]
+        var cadastradas = tableData2[6]
+        var disponiveis = adquiridas - cadastradas
+        console.log(adquiridas)
+        maxField = disponiveis;
+        if (maxField == 0) {
+        $('#texto_enviar_json').prop("disabled", true);
+        } else {  $('#texto_enviar_json').prop("disabled", false);                                     }
+        
+        $("#texto_enviar_json").val("")
+        $("#total_para_cadastrar").text(disponiveis);
+        $("#idchave").val(idlic);
+        $("#tipochave").val(tipo);
+        $("#tipotitulochave").text(tipo); 
+        $("#id_para_json").text(idlic);  
+        $("#tipo_para_json").text(tipo);
+        
+
+});
+})
+
+var addButton = $('.add_button'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+$(addButton).click(function(){
+        //Check maximum number of input fields
+        if(x <= maxField){
+            if (tipo == "dispositivo"){
+            var fieldHTML = '<div id="deldyn"><div class="col-md-10 align-items-center justify-content-center input-group mb-3">                            <input type="text" autocomplete="off" required autofocus class="form-control" name="chave['+x+']" value="" placeholder="'+x+' Adicione uma chave" >                            <a href="" class="remove_button btn btn-danger" type="button" id="button-addon1">                              -                            </a>                          </div></div>'; //New input field html 
+            }
+            else {
+            var fieldHTML = '<div id="deldyn"><div class="col-md-10 align-items-center justify-content-center input-group mb-3">       <input type="text" name="user['+x+']" class="form-control" placeholder="'+x+'Adicione um usuário" >                     <input type="text" autocomplete="off" required autofocus class="form-control" name="chave['+x+']" value="" placeholder="Adicione a chave do usuario" >                            <a href="" class="remove_button btn btn-danger" type="button" id="button-addon1">                              -                            </a>                          </div></div>'; //New input field html 
+
+            }
+
+            console.log("adicione");
+            console.log(x)
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+    
+    
+    
+   //Once remove button is clicked
+   $(wrapper).on('click', '.remove_button', function(e){
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+ 
+jQuery(function(){
+$("#tabela_principal_de_softwares").on('click', '#click_gerenciar_licencas', function () {
+        var data2 = table.row($(this).parents('tr')).data();
+        console.log(data2)
+        
+
+        total_ativos_sem_lic = 0
+        total_lic_de_volume_disponiveis = 0
+            
+        total_lic_reservadas = 0
+        total_lic_aplicadas = 0
+        $("#div_botao_desabilitado_lic_volume").hide();
+        $("#div_button_aplicar_volume_em_todos").hide();
+        $("#nome_superior").text(data2.nome);
+        $("#nome_superior2").text(data2.nome);
+
+        $("#apl_sup_nome").text(data2.nome);
+        
+        $("#dev_superior").text(data2.desenvolvedor);
+        var adquiridas_total = 0
+        var cadastradas_total = 0
+        var disponiveis_total = 0
+        softwareid = data2.id
+        $("#nomesoftwareinput").val(data2.nome);
+        $("#softwareidinput").val(data2.id);
+        $("#nome-ativo-modal").text(data2.nome);
+        $("#disponiveis_superior").text(data2.disponiveis);
+       
+        $("#apl_select").find("option").remove().end().append(
+        '<option disabled selected value> Selecione um ativo </option>');   
+        
+
+$.getJSON("http:/localhost:porta/api/get_licencas_adquiridas/"+data2.id, function( data ) {
+            
+
+            
+            $("#div_tabela_janela_lic_disponiveis_total").hide();
+            
+            $("#tabela_janela_lic_ativos_sem_lic > tbody").html("");
+            $("#tabela_janela_lic > tbody").html("");
+            $("#tabela_janela_lic_aplicadas > tbody").html("");
+            $("#tabela_janela_lic_reservadas > tbody").html("");
+            $("#tabela_janela_lic_disponiveis > tbody").html("");
+            $("#tabela_janela_lic_disponiveis_total > tbody").html("");
+            
+            $.each(data.ativos_de_software, function(i, item) {
+            console.log(adquiridas_total)
+            console.log(item.adquiridos)    
+            adquiridas_total = adquiridas_total + item.adquiridos
+            cadastradas_total = cadastradas_total + item.cadastrados
+            disponiveis_total = disponiveis_total + item.disponiveis
+              
+            
+            var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(item.versao),$('<td>').text(item.tipo),$('<td>').text(item.data_de_aquisicao),$('<td>').text(item.adquiridos),$('<td>').text(item.cadastrados),$('<td><div class="btn-group mb-3 btn-group" role="group" ><button type="button" id="addlic" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_mais"  >+</button>                                          </div></td>')
+                ).appendTo('#tabela_janela_lic');    
+            
+           
+            })
+            var max_volume = 0
+            var max_user = 0
+            var max_dispositivo = 0 
+
+
+            $.each(data.ativos_nao_licenciados, function(i, item) { 
+
+            var $tr = $("#apl_select").append('<option selected value='+item.hostname+'> '+item.hostname+' / '+item.endereco_ip+' </option>');    
+
+})
+
+
+
+            $.each(data.lista_disponiveis, function(i, item) {
+              
+            var userchave = ""
+            if (item.tipo == "volume") {
+             total_lic_de_volume_disponiveis = total_lic_de_volume_disponiveis + 1
+             userchave = item.chave
+             if (max_volume < 1) {
+                var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.tipo),$('<td>').text(item.modalidade),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button>                 <button type="button" class="btn btn-secondary" disabled id="click_reservar_license" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Reservar</button></div></td>')
+                ).appendTo('#tabela_janela_lic_disponiveis');
+              
+                max_volume++ 
+              } 
+                  
+            }
+            else if (item.tipo == "dispositivo") {
+               
+             userchave = item.chave 
+             if (max_dispositivo < 3) {
+                var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.tipo),$('<td>').text(item.modalidade),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button>                 <button type="button" class="btn btn-secondary" id="click_reservar_license" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Reservar</button></div></td>')
+                ).appendTo('#tabela_janela_lic_disponiveis');
+              
+                max_dispositivo++ 
+              } else {
+                var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.tipo),$('<td>').text(item.modalidade),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button>                 <button type="button" class="btn btn-secondary" id="click_reservar_license" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Reservar</button></div></td>')
+                ).appendTo('#tabela_janela_lic_disponiveis_total');
+
+              }
+            } else {
+                  
+               userchave = item.usuario+" / "+item.chave    
+               if (max_user < 3) {               
+                var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.tipo),$('<td>').text(item.modalidade),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button>                 <button type="button" class="btn btn-secondary" id="click_reservar_license" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Reservar</button></div></td>')
+                ).appendTo('#tabela_janela_lic_disponiveis');
+                max_user++
+               } else {
+                var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.tipo),$('<td>').text(item.modalidade),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button>                 <button type="button" class="btn btn-secondary" id="click_reservar_license" data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Reservar</button></div></td>')
+                ).appendTo('#tabela_janela_lic_disponiveis_total');
+
+              }  
+            }  
+            
+            
+                
+            
+           
+            })
+            var $tr = $('<tr>').append($('<td style="display:none">').text(""),$('<td><a id="click_mostrar_todas_disponiveis" class="btn-sm btn-outline-primary">Listar todas as licencas disponiveis</a><td>')
+                ).appendTo('#tabela_janela_lic_disponiveis');
+                
+            
+            $.each(data.lista_aplicadas, function(i, item) { 
+            total_lic_aplicadas = total_lic_aplicadas + 1
+            var userchave = ""
+            if (item.tipo == "usuario") {
+             userchave = item.usuario+" / "+item.chave     
+             
+             var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td>').text(item.hostname_aplicado + " / " + item.ip_hostname_aplicado),$('<td>').text(userchave),$('<td>').text(item.data_de_aplicacao),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_remover_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Remover</button> </div></td>')
+                ).appendTo('#tabela_janela_lic_aplicadas');
+              
+                  
+            } else {
+               userchave = item.chave
+               var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td>').text(item.hostname_aplicado+ " / " + item.ip_hostname_aplicado),$('<td>').text(userchave),$('<td>').text(item.data_de_aplicacao),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_remover_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Remover</button> </div></td>')
+                ).appendTo('#tabela_janela_lic_aplicadas');     
+             
+            }  
+            
+            
+                
+            
+           
+            }) 
+            
+            $.each(data.ativos_nao_licenciados, function(i, item) {
+                total_ativos_sem_lic = total_ativos_sem_lic + 1 
+            
+           
+             var $tr = $('<tr>').append($('<td>').text(item.hostname),$('<td>').text(item.endereco_ip)
+                ).appendTo('#tabela_janela_lic_ativos_sem_lic');
+                              
+                                 
+                
+            
+           
+            })
+            
+            $.each(data.lista_reservadas, function(i, item) {
+                total_lic_reservadas = total_lic_reservadas + 1 
+            
+             if (item.tipo == "usuario") {
+             userchave = item.usuario+" / "+item.chave     
+             
+             var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.modalidade),$('<td style="display:none">').text(item.tipo),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.observacoes),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button> </div></td>')
+                ).appendTo('#tabela_janela_lic_reservadas');
+              
+                  
+            } else {
+               userchave = item.chave
+               var $tr = $('<tr>').append($('<td style="display:none">').text(item.id),$('<td style="display:none">').text(item.modalidade),$('<td style="display:none">').text(item.tipo),$('<td style="display:none">').text(item.data_de_expiracao),$('<td>').text(userchave),$('<td>').text(item.observacoes),$('<td><div class="btn-group mb-3 btn-group" role="group"><button type="button" id="click_aplicar_license" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#modal_janela_lic_aplicar">Aplicar</button> </div></td>')
+                ).appendTo('#tabela_janela_lic_reservadas');     
+             
+            }  
+                              
+                                 
+                
+            
+           
+            }) 
+        
+    $("#badge_total_disponiveis").text(disponiveis_total);     
+    $("#badge_total_aplicadas").text(total_lic_aplicadas);     
+    $("#badge_total_reservadas").text(total_lic_reservadas);     
+    $("#badge_total_ativos_sem_lic").text(total_ativos_sem_lic);     
+
+    $("#adquiridas_superior").text(adquiridas_total);
+    $("#cadastradas_superior").text(cadastradas_total);
+    $("#disponiveis_superior").text(disponiveis_total);
+    $("#mensagem_lic_volume_indisponivel").text(total_lic_de_volume_disponiveis);
+
+    if (total_ativos_sem_lic < total_lic_de_volume_disponiveis ) { 
+
+    
+        $("#div_botao_desabilitado_lic_volume").hide();
+        $("#div_button_aplicar_volume_em_todos").show();
+
+    } else {
+        $("#div_botao_desabilitado_lic_volume").show();
+        $("#div_button_aplicar_volume_em_todos").hide();
+    }
+    
+    
+});
+
+        
+
+
+});
+})
+
+jQuery(function(){
+$("#tabela_janela_lic_disponiveis").on('click', '#click_mostrar_todas_disponiveis', function () {
+        
+    $("#div_tabela_janela_lic_disponiveis_total").show();
+
+
+});
+})
+
+
+
+
+jQuery(function(){
+$("#tabela_janela_lic_reservadas").on('click', '#click_aplicar_license', function () {
+        
+        $("#reservar_license_form").hide()
+        $("#aplicar_license_form").hide()
+       
+           
+        //limpa formulario apl
+        $("#apl_id").val("")
+        $("#apl_tipo").val("")
+        $("#apl_info").text("atineina")
+        $("#apl_chave").text("")
+        
+
+        //limpar formulario res
+        $("#res_id").val("")
+        $("#res_tipo").val("")
+        $("#res_obs").val("")
+        $("#res_chave").text("")
+
+        $("#aplicar_license_form").show()
+        
+    
+        var $td = $(this).closest('tr').children("td"),
+        len = $td.length;       
+        
+        
+        var tableDataApl = $td.map(function(i) {
+        
+        if(i < len -1)
+                return $(this).text() }         
+        ).get();
+        
+        
+
+        var id_da_license = tableDataApl[0]
+        var data_exp = tableDataApl[3]
+        var modalidade = tableDataApl[1]
+        var tipo = tableDataApl[2]
+        var userchave = tableDataApl[4]
+        var informacoes = tableDataApl[5]
+        console.log("adasd")
+        $("#apl_sup_tipo").text(tipo);
+        $("#apl_sup_modalidade").text(modalidade);
+        $("#apl_sup_exp").text(data_exp);
+        $("#apl_id").val(id_da_license);
+        $("#apl_tipo").val(tipo);
+        $("#apl_chave").text(userchave);
+        $("#apl_info").text(informacoes)
+
+
+        
+        
+        
+   
+        
+        
+
+});
+})
+
+
+jQuery(function(){
+$("#tabela_janela_lic_disponiveis").on('click', '#click_aplicar_license', function () {
+        
+        $("#reservar_license_form").hide()
+        $("#aplicar_license_form").hide()
+       
+           
+        //limpa formulario apl
+        $("#apl_id").val("")
+        $("#apl_tipo").val("")
+        $("#apl_info").text("")
+        $("#apl_chave").text("")
+        
+
+        //limpar formulario res
+        $("#res_id").val("")
+        $("#res_tipo").val("")
+        $("#res_obs").val("")
+        $("#res_chave").text("")
+
+        $("#aplicar_license_form").show()
+        
+    
+        var $td = $(this).closest('tr').children("td"),
+        len = $td.length;       
+        
+        
+        var tableDataApl = $td.map(function(i) {
+        
+        if(i < len -1)
+                return $(this).text() }         
+        ).get();
+                
+        var id_da_license = tableDataApl[0]
+        var data_exp = tableDataApl[1]
+        var modalidade = tableDataApl[4]
+        var tipo = tableDataApl[3]
+        var userchave = tableDataApl[2]
+        console.log("adasd")
+        $("#apl_sup_tipo").text(tipo);
+        $("#apl_sup_modalidade").text(modalidade);
+        $("#apl_sup_exp").text(data_exp);
+        $("#apl_id").val(id_da_license);
+        $("#apl_tipo").val(tipo);
+        $("#apl_chave").text(userchave);
+
+        
+        
+        
+
+});
+})
+
+
+
+
+
+jQuery(function(){
+$("#tabela_janela_lic_disponiveis").on('click', '#click_reservar_license', function () {
+        
+        $("#reservar_license_form").hide()
+        $("#aplicar_license_form").hide()
+           
+        //limpa formulario apl
+        $("#apl_id").val("")
+        $("#apl_tipo").val("")
+        $("#apl_info").text("")
+        $("#apl_chave").text("")
+        
+
+        //limpar formulario res
+        $("#res_id").val("")
+        $("#res_tipo").val("")
+        $("#res_obs").val("")
+        $("#res_chave").text("")
+
+        $("#reservar_license_form").show()
+        
+    
+        var $td = $(this).closest('tr').children("td"),
+        len = $td.length;       
+        
+        
+        var tableDataApl = $td.map(function(i) {
+        
+        if(i < len -1)
+                return $(this).text() }         
+        ).get();
+                
+        var id_da_license = tableDataApl[0]
+        var data_exp = tableDataApl[1]
+        var modalidade = tableDataApl[4]
+        var tipo = tableDataApl[3]
+        var userchave = tableDataApl[2]
+        console.log("adasd")
+        $("#apl_sup_tipo").text(tipo);
+        $("#apl_sup_modalidade").text(modalidade);
+        $("#apl_sup_exp").text(data_exp);
+        $("#res_id").val(id_da_license);
+        $("#res_tipo").val(tipo);
+        $("#res_chave").text(userchave);
+        
+
+        
+        
+        
+        
+       
+         
+
+$.getJSON("http:/localhost:porta/api/instalacoes_sw/"+softwareid, function( data ) {
+    console.log("chamei json")
+    //limpar select
+
+    $.each(data, function(i, item) { 
+
+        var $tr = $("#apl_select").append('<option selected value='+item.hostname+'> '+item.hostname+' / '+item.endereco_ip+' </option>');    
+        
+})
+            
+           
+
+});       
+        
+        
+
+});
+})
+
+
+
+
+jQuery(function(){
+$("#tabela_principal_de_softwares").on('click', '#click_lista_instalacoes', function () {
+        console.log("clikei no 2")
+        var data2 = table.row($(this).parents('tr')).data();
+        console.log(data2)
+        
+
+
+$.getJSON("http:/localhost:porta/api/instalacoes_sw/"+data2.id, function( data ) {
+    console.log("chamei json")
+    $("#tabela_lista_instalacoes > tbody").html("");
+    $.each(data, function(i, item) { 
+
+        var $tr = $('<tr>').append($('<td>').text(item.hostname),$('<td>').text(item.endereco_ip),$('<td>').text(item.versao_instalada),$('<td>').text(item.data_de_instalacao)
+        ).appendTo('#tabela_lista_instalacoes');    
+        
+    })
+            
+           
+
+});
+});
+})
+
+
+
+        });
+
+
+
+
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    }, false);
+</script>
+
+
+</body>
+
+</html>

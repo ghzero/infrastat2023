@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFRAstat - Controle dos ativos de TI do LabTrans</title>
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="stylesheet" href="assets/css/main/app-dark.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/shared/iconly.css">
+    <link rel="stylesheet" href="assets/css/pages/datatables.css">
+    <link rel="stylesheet" href="assets/css/pages/email.css">
+    <link rel="stylesheet" href="assets/css/pages/fontawesome.css">
+    <style>
+      .fontawesome-icons {
+        text-align: center;
+      }
+
+      article dl {
+        background-color: rgba(0, 0, 0, .02);
+        padding: 20px;
+      }
+
+      .fontawesome-icons .the-icon {
+        font-size: 34px;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="">
+      <div class="page-heading"></div>
+      <div class="page-content">
+        <section class="row">
+          <div class="col-12">
+
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-3 ">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <img class="w-50 text-center" src="assets/images/faces/logito.png" id="logo12">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 ">
+                  <div class="card">
+                    <div class="card">
+                      <div id="main" class="layout-horizontal">
+                        <nav class="main-navbar">
+                          <div class="container">
+                            <ul>
+                              <li class="menu-item  ">
+                                <a href="index.html" class='menu-link'>
+                                  <i class="bi bi-grid-fill"></i>
+                                  <span>Dashboards</span>
+                                </a>
+                                <div class="submenu ">
+                                  <div class="submenu-group-wrapper">
+                                    <ul class="submenu-group">
+                                      <li class="submenu-item">
+                                        <a href="index.html" class='submenu-link'>Página Inicial</a>
+                                      </li>
+                                      <li class="submenu-item  ">
+                                        <a href="#" class='submenu-link'>Mapa da Rede</a>
+                                      </li>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="menu-item  has-sub">
+                                <a href="#" class='menu-link'>
+                                  <i class="bi bi-stack"></i>
+                                  <span>Ativos de TI</span>
+                                </a>
+                                <div class="submenu ">
+                                  <div class="submenu-group-wrapper">
+                                    <ul class="submenu-group ">
+                                      <li class="submenu-item  has-sub">
+                                        <a href="#" class='submenu-link'>Informações</a>
+                                        <ul class="subsubmenu">
+                                          <li class="subsubmenu-item ">
+                                            <a href="ativos_de_ti_visao_geral.html" class="subsubmenu-link">Visão Geral</a>
+                                          </li>
+                                          <li class="subsubmenu-item ">
+                                            <a href="#" class="subsubmenu-link">[X]Componentes</a>
+                                          </li>
+                                          <li class="subsubmenu-item ">
+                                            <a href="#" class="subsubmenu-link">[X]Detalhado</a>
+                                          </li>
+                                          <li class="subsubmenu-item ">
+                                            <a href="#" class="subsubmenu-link">[X]Por Equipe</a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li class="submenu-item  has-sub">
+                                        <a href="#" class='submenu-link'>Estatisticas</a>
+                                        <ul class="subsubmenu">
+                                          <li class="subsubmenu-item ">
+                                            <a href="#" class="subsubmenu-link">[X]Utilização</a>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                      <li class="submenu-item  ">
+                                        <a href="#" class='submenu-link vermelho'>[X]Cadastros</a>
+                                      </li>
+                                      <li class="submenu-item  ">
+                                        <a href="#" class='submenu-link'>[X]Estoque</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="menu-item active has-sub">
+                                <a href="#" class='menu-link'>
+                                  <i class="bi bi-grid-1x2-fill"></i>
+                                  <span>Segurança</span>
+                                </a>
+                                <div class="submenu ">
+                                  <div class="submenu-group-wrapper">
+                                    <ul class="submenu-group">
+                                      <li class="submenu-item  ">
+                                        <a href="seguranca_visao_geral.html" class='submenu-link'>Visão Geral</a>
+                                      </li>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="menu-item  has-sub">
+                                <a href="#" class='menu-link'>
+                                  <i class="bi bi-file-earmark-medical-fill"></i>
+                                  <span>Manutenção</span>
+                                </a>
+                                <div class="submenu ">
+                                  <div class="submenu-group-wrapper">
+                                    <ul class="submenu-group">
+                                      <li class="submenu-item">
+                                        <a href="#" class='submenu-link'>[X]Nova manutenção</a>
+                                      </li>
+                                      <li class="submenu-item  ">
+                                        <a href="#" class='submenu-link'>[X]Manutenções</a>
+                                      </li>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 ">
+                  <div class="card">
+                    <div class="d-flex align-items-center"></div>
+                  </div>
+                </div>
+                <div class="col-md-1 ">
+                  <div class="card">
+                    <div class="ms-3 name">
+                      <h6 class="text-muted mb-0">@suporte</h6>
+                    </div>
+                    <div class="theme-toggle d-flex gap-2  justify-content-end mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2" opacity=".3"></path>
+                          <g transform="translate(-210 -1)">
+                            <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                            <circle cx="220.5" cy="11.5" r="4"></circle>
+                            <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path>
+                          </g>
+                        </g>
+                      </svg>
+                      <div class="form-check form-switch fs-6">
+                        <input class="form-check-input  me-0" type="checkbox" id="toggle-dark">
+                        <label class="form-check-label"></label>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-lg-1">
+            
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_ultimoupdate">2</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">SWITCHES</h7>
+                  </div>
+                </div>
+                
+              </div>
+             
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-11">
+            
+            <div class="row">
+              <div class="col-12">
+                
+
+              <div class="card fapeu switch " id="f0:7d:68:b5:5e:b7s1">
+                  <div class="card-body">
+                      <div class="row" id="table-responsive">
+                          <div class="col-12">
+                              <div class="card">
+                                 
+                                  <div class="card-content ">
+                                      <h4 class="card-title">SWITCH LOCAL A</h4>
+                                      <div class="row ">
+                             
+                                          
+                                          <div class="row bg-dark ">
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 1"><h6></h6><span id="s2b1" class=" badge bg-secondary"><span id="s2p1">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 2"><h6></h6><span id="s2b2"class="  badge bg-secondary"><span id="s2p2">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 3"><h6></h6><span id="s2b3" class="  badge bg-secondary"><span id="s2p3">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 4"><h6></h6><span id="s2b4" class="   badge bg-secondary"><span id="s2p4">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 5"><h6></h6><span id="s2b5" class="badge bg-secondary"><span id="s2p5">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 6"><h6></h6><span id="s2b6"class="badge bg-secondary"><span id="s2p6">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 7"><h6></h6><span id="s2b7" class="  badge bg-secondary"><span id="s2p7">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 8"><h6></h6><span id="s2b8" class="  badge bg-secondary"><span id="s2p8">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 9"><h6></h6><span id="s2b9" class="badge bg-secondary"><span id="s2p9">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 10"><h6></h6><span id="s2b10"class="badge bg-secondary"><span id="s2p10">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 11"><h6></h6><span id="s2b11" class="  badge bg-secondary"><span id="s2p11">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 12"><h6></h6><span id="s2b12" class="   badge bg-secondary"><span id="s2p12">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 13"><h6></h6><span id="s2b13" class="badge bg-secondary"><span id="s2p13">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 14"><h6></h6><span id="s2b14"class="badge bg-secondary"><span id="s2p14">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 15"><h6></h6><span id="s2b15" class="  badge bg-secondary"><span id="s2p15">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 16"><h6></h6><span id="s2b16" class="   badge bg-secondary"><span id="s2p16">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 17"><h6></h6><span id="s2b17" class="badge bg-secondary"><span id="s2p17">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 18"><h6></h6><span id="s2b18"class="badge bg-secondary"><span id="s2p18">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 19"><h6></h6><span id="s2b19" class="  badge bg-secondary"><span id="s2p19">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 20"><h6></h6><span id="s2b20" class="   badge bg-secondary"><span id="s2p20">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 21"><h6></h6><span id="s2b21" class="badge bg-secondary"><span id="s2p21">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 22"><h6></h6><span id="s2b22"class="badge bg-secondary"><span id="s2p22">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 23"><h6></h6><span id="s2b23" class="  badge bg-secondary"><span id="s2p23">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 24"><h6></h6><span id="s2b24" class="   badge bg-secondary"><span id="s2p24">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 25"><h6></h6><span id="s2b25" class="badge bg-secondary"><span id="s2p25">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 26"><h6></h6><span id="s2b26"class="badge bg-secondary"><span id="s2p26">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 27"><h6></h6><span id="s2b27" class="  badge bg-secondary"><span id="s2p27">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 28"><h6></h6><span id="s2b28" class="   badge bg-secondary"><span id="s2p28">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 29"><h6></h6><span id="s2b29" class="badge bg-secondary"><span id="s2p29">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 30"><h6></h6><span id="s2b30"class="badge bg-secondary"><span id="s2p30">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 31"><h6></h6><span id="s2b31" class="  badge bg-secondary"><span id="s2p31">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 32"><h6></h6><span id="s2b32" class="   badge bg-secondary"><span id="s2p32">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 33"><h6></h6><span id="s2b33" class="badge bg-secondary"><span id="s2p33">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 34"><h6></h6><span id="s2b34"class="badge bg-secondary"><span id="s2p34">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 35"><h6></h6><span id="s2b35" class="  badge bg-secondary"><span id="s2p35">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 36"><h6></h6><span id="s2b36" class="   badge bg-secondary"><span id="s2p36">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 37"><h6></h6><span id="s2b37" class="badge bg-secondary"><span id="s2p37">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 38"><h6></h6><span id="s2b38"class="badge bg-secondary"><span id="s2p38">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 39"><h6></h6><span id="s2b39" class="  badge bg-secondary"><span id="s2p39">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 40"><h6></h6><span id="s2b40" class="   badge bg-secondary"><span id="s2p40">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 41"><h6></h6><span id="s2b41" class="badge bg-secondary"><span id="s2p41">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 42"><h6></h6><span id="s2b42"class="badge bg-secondary"><span id="s2p42">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 43"><h6></h6><span id="s2b43" class="  badge bg-secondary"><span id="s2p43">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 44"><h6></h6><span id="s2b44" class="   badge bg-secondary"><span id="s2p44">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-1 ">
+                                                  <div class="row  ">
+                                                      <div class="col-md-6 ">
+                                                          <a data-bs-toggle="tooltip" title="Porta 45"><h6></h6><span id="s2b45" class="badge bg-secondary"><span id="s2p45">--------</span></span></h6></a>
+                                                          <a data-bs-toggle="tooltip" title="Porta 46"><h6></h6><span id="s2b46"class="badge bg-secondary"><span id="s2p46">--------</span></span></h6></a>
+                                                  </div>
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 47"><h6></h6><span id="s2b47" class="  badge bg-secondary"><span id="s2p47">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 48"><h6></h6><span id="s2b48" class="   badge bg-secondary"><span id="s2p48">--------</span></span></h6></a>
+                                                  </div>
+
+                                                  </div>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              
+                                             
+                                              <div class="row ">
+                                                  <div class="col-md-2 ">
+                                                      <h6></h6><span class="   badge "><span id="s1ip">Nome: DGSLOC1</span></span></h6>
+                                                     
+                                                      
+                                                      
+                                                  </div>
+                                                  <div class="col-md-2 ">
+                                                      <h6></h6><span class=" d-flex   badge "><span id="s1mac">MAC: f0:7d:68:b5:5e:b7</span></span></h6>
+                                                     
+                                                     
+                                                      
+                                                      
+                                                  </div>
+
+                                                  <div class="col-md-8 ">
+                                                      <h6></h6><span class=" d-flex   badge "><span id="s1mac">Modelo: DGS-3100-48 Gigabit stackable L2</span></span></h6>
+                                                      
+                                                     
+                                                     
+                                                      
+                                                      
+                                                  </div>
+                                                     
+                                                      
+                                                      
+
+                                              </div>
+
+
+
+                                          </div>
+                                      </div>
+                                     
+                                  </div>
+                              </div>
+                          </div>
+                      </div>                 
+                     
+                  </div>
+
+              
+     
+              </div>
+             
+           
+              <div class="s7 card fepese switch 48portas" id="f0:7d:68:c2:51:17">
+               <div class="card-body">
+                  <div class="row" id="table-responsive">
+                      <div class="col-12">
+                          <div class="card">
+                             
+                              <div class="card-content ">
+                                  <h4 class="card-title">SWITCH LOCAL B</h4>
+                                  <div class="row ">
+                         
+                                      
+                                      <div class="row bg-dark ">
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 1"><h6></h6><span id="s7b1" class=" badge bg-secondary"><span id="s7p1">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 2"><h6></h6><span id="s7b2"class="  badge bg-secondary"><span id="s7p2">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 3"><h6></h6><span id="s7b3" class="  badge bg-secondary"><span id="s7p3">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 4"><h6></h6><span id="s7b4" class="   badge bg-secondary"><span id="s7p4">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 5"><h6></h6><span id="s7b5" class="badge bg-secondary"><span id="s7p5">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 6"><h6></h6><span id="s7b6"class="badge bg-secondary"><span id="s7p6">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 7"><h6></h6><span id="s7b7" class="  badge bg-secondary"><span id="s7p7">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 8"><h6></h6><span id="s7b8" class="  badge bg-secondary"><span id="s7p8">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 9"><h6></h6><span id="s7b9" class="badge bg-secondary"><span id="s7p9">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 10"><h6></h6><span id="s7b10"class="badge bg-secondary"><span id="s7p10">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 11"><h6></h6><span id="s7b11" class="  badge bg-secondary"><span id="s7p11">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 12"><h6></h6><span id="s7b12" class="   badge bg-secondary"><span id="s7p12">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 13"><h6></h6><span id="s7b13" class="badge bg-secondary"><span id="s7p13">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 14"><h6></h6><span id="s7b14"class="badge bg-secondary"><span id="s7p14">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 15"><h6></h6><span id="s7b15" class="  badge bg-secondary"><span id="s7p15">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 16"><h6></h6><span id="s7b16" class="   badge bg-secondary"><span id="s7p16">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 17"><h6></h6><span id="s7b17" class="badge bg-secondary"><span id="s7p17">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 18"><h6></h6><span id="s7b18"class="badge bg-secondary"><span id="s7p18">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 19"><h6></h6><span id="s7b19" class="  badge bg-secondary"><span id="s7p19">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 20"><h6></h6><span id="s7b20" class="   badge bg-secondary"><span id="s7p20">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 21"><h6></h6><span id="s7b21" class="badge bg-secondary"><span id="s7p21">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 22"><h6></h6><span id="s7b22"class="badge bg-secondary"><span id="s7p22">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 23"><h6></h6><span id="s7b23" class="  badge bg-secondary"><span id="s7p23">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 24"><h6></h6><span id="s7b24" class="   badge bg-secondary"><span id="s7p24">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 25"><h6></h6><span id="s7b25" class="badge bg-secondary"><span id="s7p25">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 26"><h6></h6><span id="s7b26"class="badge bg-secondary"><span id="s7p26">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 27"><h6></h6><span id="s7b27" class="  badge bg-secondary"><span id="s7p27">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 28"><h6></h6><span id="s7b28" class="   badge bg-secondary"><span id="s7p28">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 29"><h6></h6><span id="s7b29" class="badge bg-secondary"><span id="s7p29">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 30"><h6></h6><span id="s7b30"class="badge bg-secondary"><span id="s7p30">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 31"><h6></h6><span id="s7b31" class="  badge bg-secondary"><span id="s7p31">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 32"><h6></h6><span id="s7b32" class="   badge bg-secondary"><span id="s7p32">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 33"><h6></h6><span id="s7b33" class="badge bg-secondary"><span id="s7p33">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 34"><h6></h6><span id="s7b34"class="badge bg-secondary"><span id="s7p34">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 35"><h6></h6><span id="s7b35" class="  badge bg-secondary"><span id="s7p35">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 36"><h6></h6><span id="s7b36" class="   badge bg-secondary"><span id="s7p36">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 37"><h6></h6><span id="s7b37" class="badge bg-secondary"><span id="s7p37">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 38"><h6></h6><span id="s7b38"class="badge bg-secondary"><span id="s7p38">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 39"><h6></h6><span id="s7b39" class="  badge bg-secondary"><span id="s7p39">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 40"><h6></h6><span id="s7b40" class="   badge bg-secondary"><span id="s7p40">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 41"><h6></h6><span id="s7b41" class="badge bg-secondary"><span id="s7p41">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 42"><h6></h6><span id="s7b42"class="badge bg-secondary"><span id="s7p42">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 43"><h6></h6><span id="s7b43" class="  badge bg-secondary"><span id="s7p43">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 44"><h6></h6><span id="s7b44" class="   badge bg-secondary"><span id="s7p44">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          <div class="col-md-1 ">
+                                              <div class="row  ">
+                                                  <div class="col-md-6 ">
+                                                      <a data-bs-toggle="tooltip" title="Porta 45"><h6></h6><span id="s7b45" class="badge bg-secondary"><span id="s7p45">--------</span></span></h6></a>
+                                                      <a data-bs-toggle="tooltip" title="Porta 46"><h6></h6><span id="s7b46"class="badge bg-secondary"><span id="s7p46">--------</span></span></h6></a>
+                                              </div>
+                                              <div class="col-md-6 ">
+                                                  <a data-bs-toggle="tooltip" title="Porta 47"><h6></h6><span id="s7b47" class="  badge bg-secondary"><span id="s7p47">--------</span></span></h6></a>
+                                                  <a data-bs-toggle="tooltip" title="Porta 48"><h6></h6><span id="s7b48" class="   badge bg-secondary"><span id="s7p48">--------</span></span></h6></a>
+                                              </div>
+
+                                              </div>
+                                             
+                                              
+                                              
+                                          </div>
+                                          
+                                         
+                                          <div class="row ">
+                                              <div class="col-md-2 ">
+                                                  <a data-bs-toggle="tooltip" title=""><h6></h6><span class="   badge "><span id="s1ip">Nome: DGS LOCB</span></span></h6></a>
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                              <div class="col-md-2 ">
+                                                  <a data-bs-toggle="tooltip" title=""><h6></h6><span class=" d-flex   badge "><span id="s1mac">MAC: f0:7d:68:c2:51:17</span></span></h6></a>
+                                                 
+                                                 
+                                                  
+                                                  
+                                              </div>
+
+                                              <div class="col-md-8 ">
+                                                  <a data-bs-toggle="tooltip" title=""><h6></h6><span class=" d-flex   badge "><span id="s1nome">Modelo: DGS-3100-48P Gigabit</span></span></h6></a>
+                                                 
+                                                 
+                                                  
+                                                  
+                                              </div>
+                                                 
+                                                  
+                                                  
+
+                                          </div>
+
+
+
+                                      </div>
+                                  </div>
+                                 
+                              </div>
+                          </div>
+                      </div>
+                  </div>                 
+                 
+              </div>
+
+          
+ 
+              </div>
+
+         
+
+              </div>
+             
+            </div>
+          </div>
+          
+      </div>
+      
+    </div>
+    <script src="assets/js/app.js"></script>
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="assets/js/pages/horizontal-layout.js"></script>
+<script>
+
+
+
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/00:21:91:fb:f8:20", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s4b"+data[index].porta).removeClass('bg-secondary');
+                $("#s4b"+data[index].porta).addClass('bg-primary');
+                $("#s4p"+data[index].porta).text('');
+                $("#s4p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+
+
+
+
+
+
+
+
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:af:63:0a", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s13b"+data[index].porta).removeClass('bg-secondary');
+                $("#s13b"+data[index].porta).addClass('bg-primary');
+                $("#s13p"+data[index].porta).text('');
+                $("#s13p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:af:68:8a", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s12b"+data[index].porta).removeClass('bg-secondary');
+                $("#s12b"+data[index].porta).addClass('bg-primary');
+                $("#s12p"+data[index].porta).text('');
+                $("#s12p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f8:72:ea:5e:21:80", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s11b"+data[index].porta).removeClass('bg-secondary');
+                $("#s11b"+data[index].porta).addClass('bg-primary');
+                $("#s11p"+data[index].porta).text('');
+                $("#s11p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:d6:b5:12", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s10b"+data[index].porta).removeClass('bg-secondary');
+                $("#s10b"+data[index].porta).addClass('bg-primary');
+                $("#s10p"+data[index].porta).text('');
+                $("#s10p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:af:62:ea", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s9b"+data[index].porta).removeClass('bg-secondary');
+                $("#s9b"+data[index].porta).addClass('bg-primary');
+                $("#s9p"+data[index].porta).text('');
+                $("#s9p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/48:0f:cf:d5:93:11", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s8b"+data[index].porta).removeClass('bg-secondary');
+                $("#s8b"+data[index].porta).addClass('bg-primary');
+                $("#s8p"+data[index].porta).text('');
+                $("#s8p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:c2:51:17", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s7b"+data[index].porta).removeClass('bg-secondary');
+                $("#s7b"+data[index].porta).addClass('bg-primary');
+                $("#s7p"+data[index].porta).text('');
+                $("#s7p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:bf:30:ef", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s6b"+data[index].porta).removeClass('bg-secondary');
+                $("#s6b"+data[index].porta).addClass('bg-primary');
+                $("#s6p"+data[index].porta).text('');
+                $("#s6p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/1c:bd:b9:84:0a:2e", function( data ) {
+            
+            $.each(data, function(index) {
+                $("#s5b"+data[index].porta).removeClass('bg-secondary');
+                $("#s5b"+data[index].porta).addClass('bg-primary');
+                $("#s5p"+data[index].porta).text('');
+                $("#s5p"+data[index].porta).append(data[index].ativo_pat);
+               
+
+                });
+           
+
+});
+
+
+
+$.getJSON("http:/localhost:porta/api/get_ativos_no_switch/f0:7d:68:b5:5e:b7", function( data ) {
+            
+            $.each(data, function(index) {
+                if (data[index].stack == '1') {
+                 $("#s2b"+data[index].porta).removeClass('bg-secondary');
+                 $("#s2b"+data[index].porta).addClass('bg-primary');
+                 $("#s2p"+data[index].porta).text('');
+                 $("#s2p"+data[index].porta).append(data[index].ativo_pat);
+                 
+                }
+                if (data[index].stack == '2') {
+                 $("#s3b"+data[index].porta).removeClass('bg-secondary');
+                 $("#s3b"+data[index].porta).addClass('bg-primary');
+                 $("#s3p"+data[index].porta).text('');
+                 $("#s3p"+data[index].porta).append(data[index].ativo_pat);
+                 
+                }             
+                
+
+                });
+           
+
+});
+
+
+
+     
+
+$(document).ready(function () {
+
+
+
+})
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+    "itens_de_monitoramento_de_hardware": {
+      "[HW][CPU]-Detalhes-[JSN]": "dados_de_processador",
+      "[HW][PLM]-Modelo-[TXT]": "dados_de_placamae",
+      "[HW][DSK]-Detalhes-[JSN]": "dados_de_disco",
+      "[HW][GPU]-Detalhes-[JSN]": "dados_de_gpu",
+      "[HW][MEM]-Detalhes-[JSN]": "dados_de_memoria",
+      "[HW][MEM]-Total-[NUM]": "dados_de_memoria_total_em_gb",
+      "[HW][SCR]-Detalhes-[JSN]": "dados_de_tela",
+      "[MON][SW]-Lista-[JSN]": "dados_de_software"
+    },
+    "itens_de_monitoramento_de_segurança": {
+      "contact": "dados_de_administradores",
+      "poc_1_notes": "dados_de_antivirus",
+      "os_short": "dados_de_versao",
+      "serialno_a": "dados_de_update"
+    },
+    "inventario_de_monitoramento_do_ativo": {
+      "name": "hostname",
+      "tag": "endereco_ip",
+      "macaddress_a": "endereco_mac",
+      "macaddress_b": "endereco_mac2",
+      "ultimo_monitoramento": "date_hw_decomm",
+      "switch_mac": "location",
+      "switch_porta": "url_b",
+      "switch_portadesc": "url_c",
+      "switch_nome": "url_a"
+    },
+    "grupos_de_busca_por_tipo": {
+      "DESKTOP": 43,
+      "NOTEBOOK": 2,
+      "IMPRESSORA": 3,
+      "ROTEADOR": 4
+    }
+  }

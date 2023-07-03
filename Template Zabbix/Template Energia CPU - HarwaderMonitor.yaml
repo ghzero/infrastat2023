@@ -1,0 +1,15 @@
+zabbix_export:
+  version: '6.0'
+  date: '2023-07-03T12:28:51Z'
+  groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: be8147490b7340f1b27bf619045a819d
+      template: 'TCC - Template Energia CPU - HardwareMonitor'
+      name: 'TCC - Template Energia CPU - HardwareMonitor'
+      groups:
+        -
+          name: Templates

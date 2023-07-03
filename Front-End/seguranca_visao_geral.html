@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFRAstat - Controle dos ativos de TI do LabTrans</title>
+    <link rel="stylesheet" href="assets/css/main/app.css">
+    <link rel="stylesheet" href="assets/css/main/app-dark.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/shared/iconly.css">
+    <link rel="stylesheet" href="assets/css/pages/datatables.css">
+    <link rel="stylesheet" href="assets/css/pages/email.css">
+    <link rel="stylesheet" href="assets/css/pages/fontawesome.css">
+    <style>
+      .fontawesome-icons {
+        text-align: center;
+      }
+
+      article dl {
+        background-color: rgba(0, 0, 0, .02);
+        padding: 20px;
+      }
+
+      .fontawesome-icons .the-icon {
+        font-size: 34px;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="">
+      <div class="page-heading"></div>
+      <div class="page-content">
+        <section class="row">
+          <div class="col-12">
+
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-3 ">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <img class="w-50 text-center" src="assets/images/faces/logito.png" id="logo12">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 ">
+                  <div class="card">
+                    <div class="card">
+                      <div id="main" class="layout-horizontal">
+                                
+                                    
+                        <nav class="main-navbar">
+                            <div class="container">
+                                <ul>
+                                    
+                                    
+                                    
+                                    <li
+                                        class="menu-item  ">
+                                        <a href="#" class='menu-link'>
+                                            <i class="bi bi-grid-fill"></i>
+                                            <span>Dashboards</span>
+                                        </a>
+                                        <div
+                                        class="submenu ">
+                                        
+                                        <div class="submenu-group-wrapper">
+                                            
+                                            
+                                            <ul class="submenu-group">
+                                                
+                                                <li
+                                                    class="submenu-item">
+                                                    <a href="index.html"
+                                                        class='submenu-link'>Página Inicial</a>
+    
+                                                    
+                                                    
+                                                   
+                                                </li>
+                                                
+                                            
+                                            
+                                                <li
+                                                    class="submenu-item  ">
+                                                    <a href="mapa_de_rede.html"
+                                                        class='submenu-link'>Mapa da Rede</a>
+    
+                                                    
+                                                </li>
+                                                
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                                    
+                                    
+                                    
+                                    <li
+                                        class="menu-item  has-sub">
+                                        <a href="#" class='menu-link'>
+                                            <i class="bi bi-stack"></i>
+                                            <span>Ativos de TI</span>
+                                        </a>
+                                        <div
+                                            class="submenu ">
+                                            <div class="submenu-group-wrapper">
+                                                
+                                                
+                                                <ul class="submenu-group ">
+                                                    
+                                                    <li
+                                                        class="submenu-item  has-sub">
+                                                        <a href="#"
+                                                            class='submenu-link'>Informações</a>
+        
+                                                        
+                                                    
+                                                    <ul class="subsubmenu">
+                                                            
+                                                        <li class="subsubmenu-item ">
+                                                            <a href="ativos_de_hardware_visao_geral.html" class="subsubmenu-link">Ativos de hardware</a>
+                                                        </li>
+                                                        <li class="subsubmenu-item ">
+                                                            <a href="ativos_de_software_visao_geral.html" class="subsubmenu-link">Ativos de software</a>
+                                                        </li>
+                                                                                                                 
+                                                        
+                                                       
+                                                        
+                                                        
+                                                    </ul>
+                                                    
+                                                </li>
+                                                <li
+                                                class="submenu-item  has-sub">
+                                                <a href="#"
+                                                    class='submenu-link'>Estatisticas</a>
+
+                                                
+                                            
+
+                                            <ul class="subsubmenu">
+                                                    
+                                                <li class="subsubmenu-item ">
+                                                    <a href="#" class="subsubmenu-link">[X]Utilização</a>
+                                                </li>
+                                               
+                                               
+                                                
+                                                
+                                            </ul>
+                                            
+                                        </li>
+                                                
+                                                
+                                                
+                                                    
+                                                </ul>
+                                                
+                                                
+                                              
+                                                        
+                                                    
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                    
+                                    <li
+                                        class="menu-item active has-sub">
+                                        <a href="#" class='menu-link'>
+                                            <i class="bi bi-grid-1x2-fill"></i>
+                                            <span>Segurança</span>
+                                        </a>
+                                        <div
+                                            class="submenu ">
+                                            <div class="submenu-group-wrapper">
+                                                
+                                                
+                                                <ul class="submenu-group">
+                                                    
+                                                    <li
+                                                        class="submenu-item  ">
+                                                        <a href="seguranca_visao_geral.html"
+                                                            class='submenu-link'>Visão Geral</a>
+        
+                                                        
+                                                    </li>
+
+                                                   
+                                                    
+                                                    
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                                                           
+                                  
+                                                                               
+                                    
+                                    
+                                </ul>
+                              
+                            </div>
+                        </nav>
+                            
+                        
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 ">
+                  <div class="card">
+                    <div class="d-flex align-items-center"></div>
+                  </div>
+                </div>
+                <div class="col-md-1 ">
+                  <div class="card">
+                    <div class="ms-3 name">
+                      <h6 class="text-muted mb-0">@suporte</h6>
+                    </div>
+                    <div class="theme-toggle d-flex gap-2  justify-content-end mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                        <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2" opacity=".3"></path>
+                          <g transform="translate(-210 -1)">
+                            <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                            <circle cx="220.5" cy="11.5" r="4"></circle>
+                            <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path>
+                          </g>
+                        </g>
+                      </svg>
+                      <div class="form-check form-switch fs-6">
+                        <input class="form-check-input  me-0" type="checkbox" id="toggle-dark">
+                        <label class="form-check-label"></label>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" id="emailCompose">INFORMAÇÕES DE SISTEMA OPERACIONAL</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_ultimoupdate">19045</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">ULTIMA VERSÃO</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_desatualizados">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">DESATUALIZADOS</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                      <a href="#" id="btnecv" data-bs-toggle="modal" data-bs-target="#modal_lista_desatualizados" class="btn btn-sm btn-outline-primary">LISTAR DESATUALIZADOS</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="card ">
+                  <div class="card-body">
+                    <h4 class="card-title" id="emailCompose">VERSÕES INSTALADAS</h4>
+                    <div class="card-body px-2 py-3-4">
+                      <div id="donut-ativos-desatualizados"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" id="emailCompose">INFORMAÇÕES DE ANTIVIRUS</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_av_atualizados">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">ATUALIZADO</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_av_semav">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">SEM AV</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                      <a href="#" id="btnecv" data-bs-toggle="modal" data-bs-target="#modal_lista_av_desativados" class="btn btn-sm btn-outline-primary">LISTAR DESATIVADOS</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_av_desatualizados">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">DESATIVADOS</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_av_erros">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">ERROS</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                      <a href="#" id="btnecv" data-bs-toggle="modal" data-bs-target="#modal_lista_av_semav" class="btn btn-sm btn-outline-primary">LISTAR SEM AV</a>
+                    </div>
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                      <a href="#" id="btnecv" data-bs-toggle="modal" data-bs-target="#modal_lista_av_erros" class="btn btn-sm btn-outline-primary">LISTAR ERROS</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card ">
+                  <div class="card-body">
+                    <h4 class="card-title" id="emailCompose">ANTIVIRUS</h4>
+                    <div class="card-body px-2 py-3-4">
+                      <div id="donut-dados-av"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" id="emailCompose">INFORMAÇÕES DE ADMINISTRADORES</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_adm_total">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">COM ADMIN</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body px-2 py-3-4">
+                    <h1 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">
+                      <span id="valor_adm_erros">-</span>
+                    </h1>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">ERROS DE</h7>
+                    <h7 class="font-extrabold mb-0 d-flex align-items-center justify-content-center">DETECÇÃO</h7>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body ">
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                      <a href="#" id="btnecv" data-bs-toggle="modal" data-bs-target="#modal_lista_admins" class="btn btn-sm btn-outline-primary">LISTAR ADMINS</a>
+                    </div>
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                      <a href="#" id="btnecv" data-bs-toggle="modal" data-bs-target="#modal_lista_admin_erros" class="btn btn-sm btn-outline-primary">LISTAR ERROS</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="card ">
+                  <div class="card-body">
+                    <h4 class="card-title" id="emailCompose">ADMINS POR EQUIPE</h4>
+                    <div class="card-body px-2 py-3-4">
+                      <div id="donut-dados-admins"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="modal fade text-left w-100" id="modal_lista_admins" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content" style="height: 600px;">
+            <div class="modal-body">
+              <div class="col-md-12 ">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-body ">
+                        <table id="tabela_lista_admins" class="table table-striped mb-0" style="width:100%">
+                          <thead class="">
+                            <tr>
+                              <th width="40%">HOSTNAME</th>
+                              <th width="60%">ADMINS</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade text-left w-100" id="modal_lista_admin_erros" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content" style="height: 600px;">
+            <div class="modal-body">
+              <div class="col-md-12 ">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-body ">
+                        <table id="tabela_lista_admins_erro" class="table table-striped mb-0" style="width:100%">
+                          <thead class="">
+                            <tr>
+                              <th width="100%">HOSTNAME</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade text-left w-100" id="modal_lista_av_erros" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content" style="height: 600px;">
+            <div class="modal-body">
+              <div class="col-md-12 ">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-body ">
+                        <table id="tabela_lista_av_erro" class="table table-striped mb-0" style="width:100%">
+                          <thead class="">
+                            <tr>
+                              <th width="100%">HOSTNAME</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade text-left w-100" id="modal_lista_av_semav" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content" style="height: 600px;">
+            <div class="modal-body">
+              <div class="col-md-12 ">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-body ">
+                        <table id="tabela_lista_av_semav" class="table table-striped mb-0" style="width:100%">
+                          <thead class="">
+                            <tr>
+                              <th width="100%">HOSTNAME</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade text-left w-100" id="modal_lista_av_desativados" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content" style="height: 600px;">
+            <div class="modal-body">
+              <div class="col-md-12 ">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-body ">
+                        <table id="tabela_lista_av_desativados" class="table table-striped mb-0" style="width:100%">
+                          <thead class="">
+                            <tr>
+                              <th width="100%">HOSTNAME</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade text-left w-100" id="modal_lista_desatualizados" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content" style="height: 600px;">
+            <div class="modal-body">
+              <div class="col-md-12 ">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-body ">
+                        <table id="tabela_lista_desatualizados" class="table table-striped mb-0" style="width:100%">
+                          <thead class="">
+                            <tr>
+                              <th width="100%">HOSTNAME</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                <i class="bx bx-x d-block d-sm-none"></i>
+                <span class="d-none d-sm-block">Fechar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.18.1/apexcharts.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="assets/js/pages/datatables.js"></script>
+<script src="assets/js/pages/horizontal-layout.js"></script>
+<script>
+
+
+
+
+$.getJSON("http://150.162.126.111:5555/api/get_donut_versoes_windows/?skip=0&limit=500", function( data ) {
+  
+            
+            var options = {
+                chart: { type: "donut", width: "100%", height: "300" },
+                legend: { show: false },
+                plotOptions: { pie: { donut: { size: "30%" } } },
+                labels: data.labels,
+                series: data.series
+            };
+            var chart = new ApexCharts(document.querySelector("#donut-ativos-desatualizados"), options);
+            console.log(data.labels)
+            chart.render();
+        });
+
+
+
+
+      
+
+$.getJSON("http://150.162.126.111:5555/api/seguranca/", function( data ) {
+    
+
+    $("#valor_desatualizados").text(data.total_de_desatualizados);
+    $("#valor_av_atualizados").text(data.total_de_computadores_com_antivirus_ativo);
+    $("#valor_av_semav").text(data.total_de_computadores_sem_antivirus);
+    $("#valor_av_desatualizados").text(data.total_de_computadores_com_antivirus_desabilitado);
+    $("#valor_av_erros").text(data.total_de_computadores_sem_dados_de_antivirus);
+    $("#valor_adm_total").text(data.total_de_computadores_com_admin);
+    $("#valor_adm_erros").text(data.total_de_computadores_com_erro_de_admin);
+
+
+
+    $.each(data.lista_de_computadores_com_admin, function(index) {
+        $("#tabela_lista_admins tbody").append("<tr><td contenteditable=true>"+ data.lista_de_computadores_com_admin[index].hostname +"</td><td>" + data.lista_de_computadores_com_admin[index].admins +"</td></tr>");
+    });
+
+    $.each(data.lista_de_computadores_com_erro_de_admin, function(index) {
+       $("#tabela_lista_admins_erro tbody").append("<tr><td contenteditable=true>"+ data.lista_de_computadores_com_erro_de_admin[index]+"</td></tr>");
+    });
+
+    $.each(data.lista_de_computadores_sem_antivirus, function(index) {
+       $("#tabela_lista_av_semav tbody").append("<tr><td contenteditable=true>"+ data.lista_de_computadores_sem_antivirus[index]+"</td></tr>");
+    });
+
+    $.each(data.lista_de_computadores_sem_dados_de_antivirus, function(index) {
+       $("#tabela_lista_av_erro tbody").append("<tr><td contenteditable=true>"+ data.lista_de_computadores_sem_dados_de_antivirus[index]+"</td></tr>");
+    });
+
+    $.each(data.lista_de_computadores_com_antivirus_desabilitado, function(index) {
+       $("#tabela_lista_av_desativados tbody").append("<tr><td contenteditable=true>"+ data.lista_de_computadores_com_antivirus_desabilitado[index]+"</td></tr>");
+    });
+
+    $.each(data.lista_de_desatualizados, function(index) {
+       $("#tabela_lista_desatualizados tbody").append("<tr><td contenteditable=true>"+ data.lista_de_desatualizados[index]+"</td></tr>");
+    });
+            
+var options = {
+    chart: { type: "donut", width: "100%", height: "300" },
+    legend: { show: false },
+    plotOptions: { pie: { donut: { size: "30%" } } },
+    labels: data.equipes,
+    series: data.numero_admin_por_equipe
+};
+var chart = new ApexCharts(document.querySelector("#donut-dados-admins"), options);
+console.log(data.labels)
+chart.render();
+            
+var options2 = {
+    chart: { type: "donut", width: "100%", height: "300" },
+    legend: { show: false },
+    plotOptions: { pie: { donut: { size: "30%" } } },
+    labels: data.legendas_av,
+    series: data.valores_av
+};
+var chart2 = new ApexCharts(document.querySelector("#donut-dados-av"), options2);
+console.log(data.labels)
+chart2.render();
+           
+        });
+
+
+$(document).ready(function () {
+})
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
